@@ -1,0 +1,2642 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title itemprop="name">Tronic</title>
+    <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+    <script async="" src="js/matomo.js"></script>
+
+</head>
+
+<body class="is-ctl-navigation is-act-home">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        
+        .section.play-video .f-video-container {
+            position: relative;
+            display: block;
+            height: 500px;
+        }
+            
+        .section.play-video .f-video-player {
+            position: relative;
+            overflow: hidden;
+            height: 0;
+            padding-bottom: 37.25%;
+            height: 100%;
+            background-color: #000;
+        }
+            
+        .section.play-video  .f-video-player iframe,
+        .section.play-video  .f-video-player object,
+        .section.play-video  .f-video-player embed {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+            
+        .section.play-video .f-video-cover {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            /* background-image: url("https://www.kb-led-leuchten.de/media/image/95/de/99/led-leuchten-shop-lighting-professional-solution.jpg"); */
+            /* background-image: url("/video/kb-led-leuchten-1.mp4"); */
+            background-image: url("./images/led-leuchten-shop-lighting-professional-solution.jpg");
+            background-size: cover;
+            background-position: 100% 100%;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+        }
+        .section.play-video .kacheln .boxen .box .box-inner {
+            background-color: transparent;
+        }
+        .section.play-video .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner h3 {
+            font-size: 24px; 
+            line-height: 2; 
+            color: #ffffff; 
+            background: #3a3e44; padding: 5px; 
+            border: 1px solid #ffffff;
+        }
+        .section.play-video .kacheln .boxen .box-leistung .box-inner:hover .box-leistung--inner-blur {
+            opacity: 1;
+            background-size: cover !important;
+            transition: .55s ease;
+            background-image: url("https://www.kb-led-leuchten.de/media/image/95/de/99/led-leuchten-shop-lighting-professional-solution.jpg");            
+        }
+        .section.play-video .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner-blur {
+            position: absolute;
+            top: -17.5%;
+            right: -17.5%;
+            bottom: -17.5%;
+            left: -17.5%;
+            z-index: 10;
+            filter: blur(10px);
+            -webkit-filter: blur(10px);
+            -moz-filter: blur(10px);
+            -o-filter: blur(10px);
+            -ms-filter: blur(10px);
+            background-size: cover !important;
+            background: transparent no-repeat center;
+            opacity: 0;
+            transition: all .55s;
+        }
+        .section.play-video .kacheln .boxen .box .box-inner .box-leistung---link-container {
+            position: relative;
+            background: transparent;
+            bottom: 5px;
+            z-index: 12;
+            transition: opacity 1s ease;
+            width: 100%;
+            display: block;
+        }
+        .section.play-video .kacheln .boxen .box .box-inner:hover .box-leistung--content .box-leistung--inner .alm--blur-box--content-main {
+            padding: 15px 0 20px;
+        }
+        .section.play-video .kacheln .boxen .box {
+            width: 100%;
+            height: 100%;
+            display: block;
+            align-self: stretch;
+            visibility: visible;
+            opacity: 1;
+            overflow: hidden;
+            transition: visibility 0s, opacity .5s linear, width .5s linear, height .5s linear;
+            /* box-shadow: 0px 26px 20px #6c6c6c; */
+            box-shadow: 0px 0px 400px #fed700, 0px 26px 26px #3a3a3a;
+        }
+        .section.play-video .kacheln .boxen .box .box-inner .box-leistung--content {
+            margin: 0 12.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            position: absolute;
+            bottom: 57%;
+            height: auto;
+            background: transparent;
+            border: 1px solid transparent;
+            width: 75%;
+            overflow: hidden;
+            z-index: 2;
+            padding-bottom: 0px;
+            transform: translate(0, 50%);
+            transition: all .55s;
+        }
+
+
+        .section.desc .desc--title{
+            padding: 20px 0px 10px 0px;
+            border-bottom: 1px solid #000;            
+            margin: 0rem 1.25rem 0rem 1.25rem;
+            display: block;            
+            text-align:center;
+            background-clip: text;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgb(0 0 0),-1px -1px 2px rgb(0 0 0),1px -1px 2px rgb(0 0 0),-1px 1px 2px rgb(0 0 0);
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none !important;
+        }
+        .section.desc .desc--content {
+            margin-top: 10px;
+            font-size: medium;
+        }
+        .section.desc .blocks .block-item {
+            background-color: transparent;
+            position: relative;
+            height: 250px;
+            width: 100% !important; 
+            padding: 0;
+            text-align: center;
+            /* box-shadow: 0px 0px 400px #fed700; */
+            box-shadow: none;
+            transition: all .3s ease-in-out;
+        }
+        .section.benefits {
+            padding: 160px 0 80px;
+        }
+
+
+        .section-separator-bottom {
+                            --rhweb-svg-separator-top-size: 50px;
+                            --rhweb-svg-separator-bottom: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20preserveAspectRatio%3D%22none%22%20viewBox%3D%220%200%20476.62%20100.69%22%3E%3Cpath%20%20d%3D%22M476.62%20100.69V0l-238.3%2095.47L0%200v100.69Z%22%2F%3E%3C%2Fsvg%3E');
+                            --rhweb-svg-separator-bottom-size: 50px;
+                        }
+        .section[class*="section-separator-bottom"]:after {
+            transform: rotate(180deg);
+            bottom: -50px;
+            content: "";
+            position: absolute;
+            z-index: 0;
+            min-height: 50px;
+            width: 100%;
+            -webkit-mask-image: var(--rhweb-svg-separator-bottom);
+            -webkit-mask-size: cover;
+            mask-image: var(--rhweb-svg-separator-bottom);
+            mask-size: cover;
+            background-image: var(--rhweb-svg-separator-bottom);
+            background: initial;
+            background-color: inherit;
+            margin-bottom: 0.5px;
+            background-image: linear-gradient(45deg, transparent,transparent 48%, rgba(0,0,0,.3) 48%, rgba(0,0,0,.3) 52%, transparent 52%);
+            background-size: 10px 10px;
+            transition: all .35s ease-in-out;
+        }
+        .section{
+            padding: 80px 0;
+            position: relative;
+        }
+        .section .container{
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+        .section-group{
+            background-color: #fafafa;
+            z-index: 1;
+            position: relative;
+        }
+
+
+        .section .container .blocks {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .blocks .block-item{
+            position: relative;
+            height: 250px;
+            min-height: 250px;
+            width: 340px;
+            padding: 0;
+            text-align: center;
+            box-shadow: 0px 0px 400px #fed700, 0px 26px 20px #3a3a3a;
+            transition: all .2s ease-in-out;
+        }
+        .blocks .block-item:hover {
+            box-shadow: 0px 0px 400px #fed700, 0px 16px 20px #3a3a3a;
+            transition: all .2s ease-in-out;
+        }
+        
+        .blocks .block-item.bg-img {
+            width: 80%;
+            margin: 10px;
+        }
+        .block-item .overlay {
+            padding: 40px;
+            height: 100%;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .block-item .overlay .txt p {
+            height: 40px;
+            overflow: hidden;
+        }
+        .block-item .overlay i {
+            position: absolute !important;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15em !important;
+            opacity: .06 !important;
+            transition: all .8s ease-in-out;
+        }
+        .blocks .block-item:hover i {
+            font-size: 4em !important;
+            opacity: .6 !important;
+            top: 80px;
+            transition: all .3s ease-in-out;
+        }
+        .block-item .overlay .h4 {
+            font-weight: 700;
+            line-height: 24px;
+            font-size: 1.19rem;
+            margin-bottom: 10px;
+            margin-top: 23px;
+            color: #161e22;
+            height: 60px;
+            transition: all .3s ease-in-out;
+        }
+        .blocks .block-item:hover .h4 {
+            line-height: 24px;
+            font-size: 1.26rem;
+            margin-bottom: -5px;
+            margin-top: 96px;
+            transition: all .3s ease-in-out;
+        }
+        .section.beleuchtung .box-leistung--link:hover {
+            text-decoration: none ;
+        }
+
+        .section.beleuchtung button.btn.btn-leistung {
+            background: #fed700 !important; 
+            color: #000000;
+            transition: all .3s ease-in-out;
+        }
+        .section.beleuchtung button.btn.btn-leistung:hover {
+            background: #fed700 !important;
+            box-shadow: inset 0 0 15px #3a3a3a;
+            text-decoration: none;
+            transition: all .3s ease-in-out;
+        }
+
+
+        .newsletter {
+            z-index: 9999;
+            background-color: #fed700;
+            background-image: linear-gradient(45deg, transparent,transparent 48%, rgba(0,0,0,.3) 48%, rgba(0,0,0,.3) 52%, transparent 52%);
+            background-size: 10px 10px;
+            box-shadow: 0px -2px 7px #000000de, 0px 14px 21px #00000075 inset;
+            border-top: 1px solid #000;
+            padding: 80px 0;
+        }
+        .newsletter .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .newsletter-r {
+            order: 2;
+        }
+        .newsletter-l .fas {
+            font-size: 135px;
+        }
+        .rhweb-footer-newsletter-container .privacy-notice {
+            padding: 10px 40px;
+            border-radius: 0;
+            background-color: transparent;
+            font-size: 0.9em;
+        }
+ 
+        .hero-title{
+            margin-top: 20px;
+            line-height: 1.1;
+            color: #000000;
+            font-size: 38px;
+            font-weight: 900;
+            text-align: center;
+            /* box-shadow: 0px 0px 5px #fff inset; */
+            text-shadow: 0 0 39px  #fff, 0 0 39px  #fff,0 0 39px  #fff;
+        }
+        .title-h1{
+            padding: 30px 0;
+            background-color: #fed700;
+            background-image: linear-gradient(45deg, transparent,transparent 48%, rgba(0,0,0,.3) 48%, rgba(0,0,0,.3) 52%, transparent 52%);
+            background-size: 10px 10px;
+            box-shadow: 0px 10px 20px #000, 0px 28px 30px #00000045 inset, -16px 28px 30px #fed700 inset, 16px 28px 30px #fed700 inset;
+        }
+
+        .info-place {
+            width: 33%;
+            padding-bottom: 1.25rem; 
+            height: 17.2414%; 
+            top: 10.3448%;
+            box-shadow: 0px 0px 400px #fed700, 0px 26px 20px #3a3a3a;
+            transition: all .2s ease-in-out;
+        }
+        .leyba {
+            position: relative;
+            z-index: 2;
+            margin: auto;
+            width: 88px;
+            height: 88px;
+            border: 8px solid #b3b3b3;
+            line-height: 88px;
+            border-radius: 50%;
+            background: #fed700;
+            vertical-align: middle;
+            box-shadow: 0px 8px 15px #7b6d2b;
+            background-image: linear-gradient(45deg, transparent, transparent 48%, rgba(0, 0, 0, .3) 48%, rgba(0, 0, 0, .3) 52%, transparent 52%);
+            background-size: 2px 8px;
+            transition: all .3s ease-in-out;
+        }
+        .info-place:hover .leyba {
+            background-size: 10px 18px;
+        }
+        .infoled {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 380px;
+            background: rgba(0, 0, 0, 0.03);
+            margin-top: -40px;
+            /* border: 1px solid #7d7d7d; */
+            padding: 80px 10px;
+            text-align: center;
+            color: #666;
+            box-shadow: 0px 26px 28px #00000096, 0px 0px 100px #b7b798 inset;
+            background-color: #fff;
+            transition: all .3s ease-in-out;
+        }
+        .info-place:nth-child(2) .infoled {
+            padding: 60px 10px;
+        }
+        .infoled-p{
+            line-height: 1.5em;
+            margin: 20px;
+            margin-top: 5px;
+            height: 165px;
+            overflow: hidden;
+            text-wrap-style: balance;
+        }
+        .infoled h3{
+            white-space: nowrap;
+            font-size: 19px;
+            margin-top: 40px;
+            /* margin-bottom: 15px; */
+            text-align: center;
+            color: #666;
+            /* border-bottom: 1px solid;
+            padding-bottom: 15px;
+            width: 50%;
+            transition: all .3s ease-in-out; */
+        }
+        .infoled hr {
+            width: 20%;
+            transition: all .3s ease-in-out;
+        }
+        .info-place:hover .infoled hr {
+             width: 50%;
+             transition: all .3s ease-in-out;
+        }
+        .infoled-btn{
+            position: relative;
+            top:0;
+            padding: 10px;
+            background: rgb(254 215 0 / 21%);
+            width: 50%;
+            border: none;
+            font-size: 1.1rem;
+            box-shadow: 0px 9px 7px #000000a8, 0px 0px 9px #000 inset;
+            border-radius: 25%;
+            transition: all .3s ease-in-out;
+        }
+        .infoled-btn:hover {
+            box-shadow: 0px 9px 7px #000000a8, 0px 0px 19px #000 inset;
+            transition: all .3s ease-in-out;
+        }
+        .info-place:hover .infoled-btn a{
+            color: #253237;
+            text-decoration: none;
+        }
+       .info-place:hover .infoled {  
+            box-shadow: 0px 26px 28px #0000003d, 0px 0px 100px #a5a58d inset;
+            transition: all .3s ease-in-out;
+       }          
+       .info-place:hover .infoled-btn{            
+            top: 10px;
+            transition: all .2s ease-in-out;
+        }
+        .header-logo-main {
+            top: -10px;
+            /* width: 250px; */
+            /* height: 150px; */
+            border-bottom: 200px solid transparent;
+            border-right: 0 solid transparent;
+            border-top: 0 solid transparent;
+            border-left: 250px solid #fed700;
+            /* filter: drop-shadow(0px 0px 5px #fed700); */
+            /* animation: myAnim 2s cubic-bezier(0.11, 0, 0.5, 0) 0s infinite normal forwards; */
+            position: relative;
+            top: -10px;
+            display: block;
+            left: 0;
+            z-index: 0;
+            transform: scaleX(1.5) skewX(10deg);
+        }
+        .logo--link {
+            filter: invert(1);
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: -185px;
+            /* width: 100px; */
+        }
+        .logo--link picture img{
+            z-index: 99999999;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: -35px;
+            top: 0;
+        }
+        @keyframes myAnim {
+            0% {
+                /* opacity: 1; */
+                filter: drop-shadow(0px 0px 5px #fed700);
+            }
+
+            50% {
+                /* opacity: 0.2; */
+                filter: drop-shadow(0px 0px 5px #fff);
+            }
+
+            100% {
+                /* opacity: 1; */
+                filter: drop-shadow(0px 0px 5px #fed700);
+            }
+        }
+
+        
+        .cms-block .cms-block-container .cms-block-container-row {
+            justify-content: space-around;
+            width: 100%;
+            margin: 0;
+        }
+        .cms-element-rhweb-cta-banner.usp-active .container-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+        header .header-actions-btn {
+            margin-left: 10px;
+        }
+
+        
+        .fa,
+        .fas {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+
+        .header-cart-total {
+            display: none;
+        }
+
+        .d-lg-block {
+            display: block;
+            order: 3;
+        }
+
+        .header-main {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1 !important;
+        }
+
+        header .header-row .header-logo-col {
+            padding-bottom: 0;
+        }
+
+        .order-lg-2 {
+            justify-content: center;
+            order: 2;
+            align-items: center;
+            margin-top: -10px;
+            flex-direction: column;
+        }
+
+        .header-actions-col {
+            margin-top: -115px;
+        }
+
+        .fa-phone-alt {
+            font-size: 22px;
+            margin-right: 15px;
+        }
+
+        header {
+            background-color: transparent;
+        }
+
+        .header-row {
+            padding: 0.5rem 0 !important;
+        }
+
+        .sections .section .section-oc .cms-block {
+            background-color: rgba(0, 0, 0, 0);
+            border: 1px solid rgba(255, 255, 255, 0);
+            margin-bottom: 0px;
+        }
+
+        .footer-main {
+            z-index: 99;
+            position: relative;
+            --rhweb-footer-socials-size: 35px;
+            --rhweb-footer-logo-gap: 10px;
+            --rhweb-footer-certificates-max-height: 85px;
+            background-color: #000000;
+            color: #ffffff;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+        .footer-main .footer-column .footer-column-content .footer-column-content-inner .footer-link,
+        .footer-main .footer-column .footer-column-content .footer-column-content-inner .footer-contact-hotline a,
+        .footer-contact-hotline .footer-main .footer-column .footer-column-content .footer-column-content-inner a {
+            font-size: 1.1em;
+            color: #ffffff;
+        }
+
+        .footer-main .footer-column .footer-column-headline {
+            font-size: 1.5em;
+            color: #ffffff;
+        }
+
+        .footer-main .footer-bottom {
+            background-color: #000000;
+            border-top: 1px solid #676767;
+        }
+
+        .footer-main .footer-bottom a {
+            color: #ffffff;
+        }
+        .footer-main .footer-column .footer-column-content .footer-contact-hotline a, .footer-main .footer-column .footer-column-content .footer-contact-form a {
+            color: #bdbdbd;
+        }
+
+/*----------------*/
+                                        .emotion--element {
+                                            display: block;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                        }
+
+                                        .emotion--container {
+                                            display: block;
+                                            position: relative;
+                                            top: 0;
+                                            left: 0;
+                                            background: #fff;
+                                        }
+
+                                        @media screen and (min-width: 78.75em) {
+                                            .emotion--container.emotion--column-12 .start-col-xl-5 {
+                                                left: 33.33333333%;
+                                            }
+                                        }
+
+                                        @media screen and (min-width: 78.75em) {
+                                            .emotion--container.emotion--column-12 .col-xl-4 {
+                                                width: 33.33333333%;
+                                            }
+                                        }
+
+                                        @media screen and (min-width: 64em) {
+                                            .emotion--container.emotion--column-12 .start-col-l-7 {
+                                                left: 50%;
+                                            }
+                                        }
+
+                                        button.btn.btn-leistung:hover {
+                                            background: #5f7285 !important;
+                                        }
+                                     
+                                        .boxen {
+
+                                        display: -webkit-flex;
+                                        display: flex;
+                                            flex-wrap: wrap;
+                                            -webkit-flex-wrap: wrap;
+                                            flex-direction: row;
+                                            -webkit-flex-direction: row;
+                                            justify-content: flex-start;
+                                            -webkit-justify-content: flex-start;
+                                            align-content: flex-start;
+                                            -webkit-align-content: flex-start;
+                                            align-items: stretch;
+                                            -webkit-align-items: stretch;
+                                            height: 100%;
+                                        }
+                                        .boxen .box {
+
+                                        width: 100%;
+                                        height: 100%;
+                                            display: block;
+                                            align-self: stretch;
+                                            visibility: visible;
+                                            opacity: 1;
+                                            overflow: hidden;
+                                            transition: visibility 0s, opacity .5s linear, width .5s linear, height .5s linear;
+                                        }
+                                        .boxen .box .box-inner {
+
+                                        height: 100%;
+                                        margin-right: 0;
+                                            background: white;
+                                            position: relative;
+                                            display: block;
+                                            overflow: hidden;
+                                            transition: all .55s;
+                                        }
+                                        .boxen .box .box-inner .box-leistung--img {
+
+                                        transition: .55s ease;
+                                        position: relative;
+                                            height: 250px;
+                                        }
+                                        .boxen .box .box-inner .box-leistung--img .box-leistung-img-hover {
+
+                                        position: absolute;
+                                        top: 0;
+                                            left: 0;
+                                            right: 0;
+                                            bottom: -8px;
+                                            background-size: cover !important;
+                                            background-position: center;
+                                            background-repeat: no-repeat;
+                                            z-index: 1;
+                                            transition: all .55s;
+                                        }
+                                        .boxen .box .box-inner .box-leistung--content {
+
+                                        margin: 0 12.5%;
+                                        display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            align-content: center;
+                                            flex-direction: column;
+                                            position: absolute;
+                                            bottom: 50%;
+                                            height: auto;
+                                            border: 1px solid transparent;
+                                            width: 75%;
+                                            overflow: hidden;
+                                            z-index: 2;
+                                            padding-bottom: 0px;
+                                            transform: translate(0, 50%);
+                                            transition: all .55s;
+                                        }
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner-blur {
+
+                                        position: absolute;
+                                        top: -17.5%;
+                                            right: -17.5%;
+                                            bottom: -17.5%;
+                                            left: -17.5%;
+                                            z-index: 10;
+                                            filter: blur(10px);
+                                            -webkit-filter: blur(10px);
+                                            -moz-filter: blur(10px);
+                                            -o-filter: blur(10px);
+                                            -ms-filter: blur(10px);
+                                            background-size: cover !important;
+                                            background: transparent no-repeat center;
+                                            opacity: 0;
+                                            transition: all .55s;
+                                        }
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner {
+
+                                        display: flex;
+                                        flex-direction: column;
+                                            justify-content: flex-start;
+                                            align-items: center;
+                                            align-content: center;
+                                            margin-right: auto;
+                                            margin-left: auto;
+                                            text-align: center;
+                                            width: 100%;
+                                            height: auto;
+                                            padding: 0.5rem;
+                                            z-index: 12;
+                                            opacity: 1;
+                                            position: relative;
+                                            top: 40%;
+                                            left: 0;
+                                            transition: all .55s;
+                                        }
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner h1,
+
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner h2,
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner h3,
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner h4,
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner h5,
+                                        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner h6 {
+                                            font-size: 0.8rem;
+                                            color: white;
+                                            text-transform: uppercase;
+                                            width: 100%;
+                                            margin-top: 0.7rem;
+                                            margin-bottom: 0.7rem;
+                                            opacity: 1;
+                                            letter-spacing: 1px;
+                                            transition: all .55s;
+                                        }
+
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner .alm--blur-box--content-main {
+                                            max-height: 0;
+                                            transition: all .55s;
+                                            padding-bottom: 0;
+                                        }
+
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner p {
+                                            opacity: 0;
+                                            color: white;
+                                            margin-bottom: 0;
+                                            transition: opacity .55s, top .55s ease;
+                                            font-size: 0.8rem;
+                                            line-height: 1.1rem;
+                                            display: block;
+                                            width: 100%;
+                                            padding: 0 20px;
+                                            transition: all .55s;
+                                        }
+
+                                        .boxen .box .box-inner .box-leistung---link-container {
+                                            position: absolute;
+                                            background: transparent;
+                                            bottom: 30px;
+                                            z-index: 12;
+                                            transition: opacity 1s ease;
+                                            width: 100%;
+                                            display: block;
+                                        }
+
+                                        .boxen .box .box-inner .box-leistung---link-container .btn-leistung {
+                                            z-index: 12;
+                                            background: white;
+                                            padding: .5rem 2rem;
+                                            opacity: 0;
+                                            margin-left: auto;
+                                            margin-right: auto;
+                                            display: block;
+                                            transition: opacity 1s ease, color .5s ease, background .5s ease;
+                                        }
+/*-----------------*/
+        .cms-element-image {
+            overflow: hidden;
+        }
+
+        .kacheln {
+            margin-top: 0;
+            height: 100%;
+        }
+
+        .kacheln .boxen {
+            display: -webkit-flex;
+            display: flex;
+            flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+            flex-direction: row;
+            -webkit-flex-direction: row;
+            justify-content: flex-start;
+            -webkit-justify-content: flex-start;
+            align-content: flex-start;
+            -webkit-align-content: flex-start;
+            align-items: stretch;
+            -webkit-align-items: stretch;
+            height: 100%;
+        }
+
+        .kacheln .boxen .box {
+            width: 100%;
+            height: 100%;
+            display: block;
+            align-self: stretch;
+            visibility: visible;
+            opacity: 1;
+            overflow: hidden;
+            transition: visibility 0s, opacity .5s linear, width .5s linear, height .5s linear;
+            box-shadow: 0px 26px 20px #6c6c6c;
+        }
+
+        .kacheln .boxen .box .box-inner {
+            height: 100%;
+            margin-right: 0;
+            background: white;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            transition: all .55s;
+        }
+
+        .kacheln .boxen .box .box-inner .box-leistung--img {
+            transition: .55s ease;
+            position: relative;
+            height: 250px;
+        }
+
+        .kacheln .boxen .box .box-inner .box-leistung--img .box-leistung-img-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: -8px;
+            background-size: cover !important;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+            transition: all .55s;
+        }
+
+        .kacheln .boxen .box .box-inner .box-leistung--content {
+            margin: 0 12.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            position: absolute;
+            bottom: 50%;
+            height: auto;
+            border: 1px solid transparent;
+            width: 75%;
+            overflow: hidden;
+            z-index: 2;
+            padding-bottom: 0px;
+            transform: translate(0, 50%);
+            transition: all .55s;
+        }
+
+        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner-blur {
+            position: absolute;
+            top: -17.5%;
+            right: -17.5%;
+            bottom: -17.5%;
+            left: -17.5%;
+            z-index: 10;
+            filter: blur(10px);
+            -webkit-filter: blur(10px);
+            -moz-filter: blur(10px);
+            -o-filter: blur(10px);
+            -ms-filter: blur(10px);
+            background-size: cover !important;
+            background: transparent no-repeat center;
+            opacity: 0;
+            transition: all .55s;
+        }
+
+        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: center;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            padding: 0.5rem;
+            z-index: 12;
+            opacity: 1;
+            position: relative;
+            top: 40%;
+            left: 0;
+            transition: all .55s;
+        }
+
+        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner h3 {
+            font-size: 0.8rem;
+            color: white;
+            text-transform: uppercase;
+            width: 100%;
+            margin-top: 0.7rem;
+            margin-bottom: 0.7rem;
+            opacity: 1;
+            letter-spacing: 1px;
+            transition: all .55s;
+        }
+
+        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner .alm--blur-box--content-main {
+            max-height: 0;
+            transition: all .55s;
+            padding-bottom: 0;
+        }
+
+        .kacheln .boxen .box .box-inner .box-leistung---link-container {
+            position: absolute;
+            background: transparent;
+            bottom: 15px;
+            z-index: 12;
+            transition: opacity 1s ease;
+            width: 100%;
+            display: block;
+        }
+
+
+
+        .kacheln .boxen .box-leistung .box-inner:hover .box-leistung--inner-blur {
+            opacity: 1;
+            background-size: cover !important;
+            transition: .55s ease;
+        }
+
+        .kacheln .boxen .box .box-inner:hover .box-leistung--content .box-leistung--inner .alm--blur-box--content-main {
+            max-height: 500px;
+            padding-bottom: 20px;
+        }
+
+        .kacheln .boxen .box-leistung .box-inner:hover .btn-leistung {
+            opacity: 1 !important;
+            background: #fff;
+            border: 0;
+            transition: .55s ease-in-out;
+        }
+
+        .kacheln .boxen .box-leistung .box-inner:hover .box-leistung--content {
+            border-color: white;
+        }
+
+        .kacheln .boxen .box-leistung .box-inner:hover {
+            transition: .55s ease;
+        }
+        .kacheln .boxen .box .box-inner:hover .box-leistung--content .box-leistung--inner-blur{
+            opacity: 1 !important;
+        }
+
+        .kacheln .boxen .box-leistung .box-inner:hover .box-leistung--inner {
+            opacity: 1 !important;
+            top: 0;
+        }
+
+        .kacheln .boxen .box .box-inner:hover .box-leistung--content .box-leistung--inner .alm--blur-box--content-main {
+            max-height: 500px;
+            padding-bottom: 20px;
+        }
+
+        .kacheln .boxen .box-leistung .box-inner:hover .box-leistung--inner p {
+            opacity: 1 !important;
+        }
+    </style>
+
+
+
+    <header
+        class="header-main header-pos-relative header-single-line header-single-line-mobile header-logo-left fixed-top">
+        <div class="header-inner" style="">
+
+            <div class="top-bar d-none d-lg-block rhweb-topbar">
+                <div class="twt-usp-bar-container" style="box-shadow: 0px 2px 10px #000;padding: 8px 0;background: #fed700;">
+                    <div class="container">
+                        <div class="twt-usp-bar-items"
+                            style="justify-content: space-between;display: flex;align-items: center;flex-direction: row;height: 100%;">
+
+                            <div class="twt-usp-bar-item twt-usp-4 item-4"
+                                style="color: #000;flex-direction: row;display: flex; font-size: 14px;font-weight: 400;align-items: center;text-transform: none;padding:0 20px;min-width: 0;">
+                                <div class="item-icon" style="display: inline-block;text-align: center;">
+                                    <i class="fas fa-phone-volume"></i>
+                                </div>
+                                <div class="item-label" style="display: inline-block;width: 100%;margin-left:5px;">
+                                    <div class="item-title">Kostenlose Hotline +49 6343 93472-0</div>
+                                </div>
+                            </div>                            
+                            <div class="twt-usp-bar-item twt-usp-2 item-2"
+                                style="color: #000;flex-direction: row;display: flex; font-size: 14px;font-weight: 400;align-items: center;text-transform: none;padding:0 20px;min-width: 0;">
+                                <div class="item-icon" style="display: inline-block;text-align: center;">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="item-label" style="display: inline-block;width: 100%;margin-left:5px;">
+                                    <div class="item-title">Made in Germany</div>
+                                </div>
+                            </div>
+                            <div class="twt-usp-bar-item twt-usp-3 item-3"
+                                style="color: #000;flex-direction: row;display: flex; font-size: 14px;font-weight: 400;align-items: center;text-transform: none;padding:0 20px;min-width: 0;">
+                                <div class="item-icon" style="display: inline-block;text-align: center;">
+                                    <i class="fas fa-hand-point-right"></i>
+                                </div>
+                                <div class="item-label" style="display: inline-block;width: 100%;margin-left:5px;">
+                                    <div class="item-title">5 Jahre Garantie</div>
+                                </div>
+                            </div>
+                            <div class="twt-usp-bar-item twt-usp-1 item-1"
+                                style="color: #000;flex-direction: row;display: flex; font-size: 14px;font-weight: 400;align-items: center;text-transform: none;padding:0;min-width: 0;">
+                                <div class="item-icon" style="display: inline-block;text-align: center;">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <div class="item-label" style="display: inline-block;width: 100%;margin-left:5px;">
+                                    <div class="item-title">Kostenloser Versand ab € 50,- Bestellwert</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-header bg-opacity-100">
+                <div class="container">
+                    <div class="header-row row gx-1 align-items-center ">
+                        <div class="header-logo-col col-auto col-sm-auto order-1">
+                            <div class="header-logo-main">
+                                <a class="logo--link" href="https://www.kb-led-leuchten.de/"
+                                    title="K+B LED Leuchten Shop - zur Startseite wechseln">
+                                    <picture style="">
+                                        <source
+                                            srcset="https://www.kb-led-leuchten.de/media/vector/78/47/d6/logo-white.svg"
+                                            media="(min-width: 78.75em)">
+                                        <source
+                                            srcset="https://www.kb-led-leuchten.de/media/vector/78/47/d6/logo-white.svg"
+                                            media="(min-width: 64em)">
+                                        <source
+                                            srcset="https://www.kb-led-leuchten.de/media/vector/78/47/d6/logo-white.svg"
+                                            media="(min-width: 48em)">
+                                        <img srcset="https://www.kb-led-leuchten.de/media/vector/78/47/d6/logo-white.svg"
+                                            alt="K+B LED Leuchten Shop - zur Startseite wechseln"
+                                            title="K+B LED Leuchten Shop - zur Startseite wechseln"
+                                            style="width:100px;">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div
+                            class="header-nav-col nav-main d-none d-lg-flex col-lg order-lg-2  nav-main-scroller bg-opacity-100">
+
+                            <!-- <i class="fas fa-phone-alt"></i> -->
+                            <span style="letter-spacing:5px;line-height:1;font-weight: 900;font-size:42px;font-family: math;font-style: italic;display:block;color: #fff;text-shadow: 0 0 10px BLACK;background-color: #b9b9b9;
+                            -webkit-background-clip: text;
+                            -moz-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            text-shadow: 2px 2px 2px rgba(255,255,255,0.3);">
+                                LED LEUCHTEN
+                                <!-- persliche Berusting<br>+49 6343 93472-0 -->
+                            </span>
+                            
+                            <span style="letter-spacing: 1.5px;font-weight: 700;font-size:14px;font-family: 'Open Sans';display:block;color: #fff;text-shadow: 0 0 10px black;">
+                                LIGHTING PROFESSIONAL SOLUTIONS
+                                <!-- persliche Berusting<br>+49 6343 93472-0 -->
+                            </span>
+                        </div>
+                        <div class="header-actions-col col-auto order-3 order-md-4  ms-sm-0">
+                            <div class="row gx-1 justify-content-end">
+                                <div class="col-auto">
+                                    <div class="account-menu" data-zen-tooltip-title="Ihr Konto">
+                                        <div class="dropdown">
+                                            <button class="btn account-menu-btn header-actions-btn" type="button"
+                                                id="accountWidget" data-account-menu="true" data-bs-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false" aria-label="Ihr Konto"
+                                                title="Ihr Konto">
+
+
+                                                <span class="icon icon-avatar">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                                        width="32" height="32" viewBox="0 0 32 32">
+                                                        <defs>
+                                                            <path
+                                                                d="M21.333 19.333h-10.667c-3.733 0-6.667 2.933-6.667 6.667v2.667c0 0.8 0.533 1.333 1.333 1.333s1.333-0.533 1.333-1.333v-2.667c0-2.267 1.733-4 4-4h10.667c2.267 0 4 1.733 4 4v2.667c0 0.8 0.533 1.333 1.333 1.333s1.333-0.533 1.333-1.333v-2.667c0-3.733-2.933-6.667-6.667-6.667zM16 16.667c3.733 0 6.667-2.933 6.667-6.667s-2.933-6.667-6.667-6.667-6.667 2.933-6.667 6.667 2.933 6.667 6.667 6.667zM16 6c2.267 0 4 1.733 4 4s-1.733 4-4 4-4-1.733-4-4 1.733-4 4-4z"
+                                                                id="icons-feather-avatar"></path>
+                                                        </defs>
+                                                        <use xlink:href="#icons-feather-avatar" fill-rule="evenodd">
+                                                        </use>
+                                                    </svg>
+                                                </span>
+
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu-end account-menu-dropdown shadow js-account-menu-dropdown"
+                                                aria-labelledby="accountWidget">
+
+
+
+                                                <div class="offcanvas-header">
+                                                    <button class="btn offcanvas-close js-offcanvas-close">
+
+
+                                                        <span class="icon icon-x icon-md">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                                                width="32" height="32" viewBox="0 0 32 32">
+                                                                <use xlink:href="#icons-feather-x" fill-rule="evenodd">
+                                                                </use>
+                                                            </svg>
+                                                        </span>
+
+                                                        <span class="offcanvas-title">
+                                                            Ihr Konto
+                                                        </span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="offcanvas-body">
+                                                    <div class="account-menu">
+
+                                                        <div class="account-menu-login">
+                                                            <a href="/demo-1/account/login" title="Anmelden"
+                                                                class="btn btn-primary account-menu-login-button">
+                                                                Anmelden
+                                                            </a>
+
+                                                            <div class="account-menu-register">
+                                                                oder <a href="/demo-1/account/login"
+                                                                    title="Registrieren">registrieren</a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="account-menu-links">
+                                                            <div class="header-account-menu">
+                                                                <div class="card account-menu-inner">
+
+                                                                    <nav
+                                                                        class="list-group list-group-flush account-aside-list-group">
+                                                                        <a href="/demo-1/account" title="Übersicht"
+                                                                            class="list-group-item list-group-item-action account-aside-item">
+                                                                            Übersicht
+                                                                        </a>
+
+                                                                        <a href="/demo-1/account/profile"
+                                                                            title="Persönliches Profil"
+                                                                            class="list-group-item list-group-item-action account-aside-item">
+                                                                            Persönliches Profil
+                                                                        </a>
+
+                                                                        <a href="/demo-1/account/address"
+                                                                            title="Adressen"
+                                                                            class="list-group-item list-group-item-action account-aside-item">
+                                                                            Adressen
+                                                                        </a>
+
+                                                                        <a href="/demo-1/account/payment"
+                                                                            title="Zahlungsarten"
+                                                                            class="list-group-item list-group-item-action account-aside-item">
+                                                                            Zahlungsarten
+                                                                        </a>
+
+                                                                        <a href="/demo-1/account/order"
+                                                                            title="Bestellungen"
+                                                                            class="list-group-item list-group-item-action account-aside-item">
+                                                                            Bestellungen
+                                                                        </a>
+                                                                    </nav>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="header-cart" data-off-canvas-cart="true"
+                                        data-zen-tooltip-title="Warenkorb">
+                                        <a class="btn header-cart-btn header-actions-btn" href="/demo-1/checkout/cart"
+                                            data-cart-widget="true" title="Warenkorb" aria-label="Warenkorb">
+                                            <span class="header-cart-icon">
+
+
+                                                <span class="icon icon-bag">
+                                                    <svg aria-label="Warenkorb" xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                                        width="32" height="32" viewBox="0 0 32 32">
+                                                        <defs>
+                                                            <path
+                                                                d="M14.667 28.667c0 1.473-1.194 2.667-2.667 2.667s-2.667-1.194-2.667-2.667c0-1.473 1.194-2.667 2.667-2.667s2.667 1.194 2.667 2.667zM29.333 28.667c0 1.473-1.194 2.667-2.667 2.667s-2.667-1.194-2.667-2.667c0-1.473 1.194-2.667 2.667-2.667s2.667 1.194 2.667 2.667zM31.733 7.867c-0.267-0.4-0.667-0.533-1.067-0.533h-21.6l-1.067-5.6c-0.133-0.667-0.667-1.067-1.333-1.067h-5.333c-0.8 0-1.333 0.533-1.333 1.333s0.533 1.333 1.333 1.333h4.267l1.067 5.6c0 0 0 0.133 0 0.133l2.267 11.067c0.4 1.867 2 3.2 3.867 3.2 0 0 0 0 0.133 0h12.933c2 0 3.6-1.333 4-3.2l2.133-11.2c0-0.4 0-0.8-0.267-1.067zM27.2 19.6c-0.133 0.667-0.667 1.067-1.333 1.067h-12.933c-0.667 0-1.2-0.4-1.333-1.067l-2-9.6h19.467l-1.867 9.6z"
+                                                                id="icons-feather-bag"></path>
+                                                        </defs>
+                                                        <use xlink:href="#icons-feather-bag" fill-rule="evenodd"></use>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                            <span class="header-cart-total">
+                                                0,00&nbsp;€*
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-auto d-none d-lg-block">
+                                    <div class="top-bar-toggle" data-zen-tooltip-title="Mehr">
+                                        <button class="btn header-actions-btn top-bar-toggle-btn" type="button"
+                                            aria-label="Mehr" data-zen-off-canvas-top-bar="true">
+
+
+                                            <span class="icon icon-stack">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="32"
+                                                    height="32" viewBox="0 0 32 32">
+                                                    <use xlink:href="#icons-feather-stack" fill-rule="evenodd"></use>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-menu-button col-auto d-lg-none order-2 ms-auto"
+                            data-zen-tooltip-title="Menü">
+                            <button class="btn nav-main-toggle-btn header-actions-btn" type="button"
+                                data-off-canvas-menu="true" aria-label="Menü">
+                                <span class="icon icon-stack">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" width="32" height="32" viewBox="0 0 32 32">
+                                        <defs>
+                                            <path
+                                                d="M28 15.333h-24c-0.8 0-1.333 0.533-1.333 1.333s0.533 1.333 1.333 1.333h24c0.8 0 1.333-0.533 1.333-1.333s-0.533-1.333-1.333-1.333zM4 10h24c0.8 0 1.333-0.533 1.333-1.333s-0.533-1.333-1.333-1.333h-24c-0.8 0-1.333 0.533-1.333 1.333s0.533 1.333 1.333 1.333zM28 23.333h-24c-0.8 0-1.333 0.533-1.333 1.333s0.533 1.333 1.333 1.333h24c0.8 0 1.333-0.533 1.333-1.333s-0.533-1.333-1.333-1.333z"
+                                                id="icons-feather-stack"></path>
+                                        </defs>
+                                        <use xlink:href="#icons-feather-stack" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-main">
+            <div class="section hero">
+                <div class="section-oc full-width">
+                    <div class="cms-block pos-0 cms-block-image-cover">
+                        <div class="cms-block-container">
+                            <div class="cms-block-container-row row cms-row">
+                                <div class="col-12">
+                                    <div class="w-100" style="padding: 0;">
+                                        <div class="html5-video-container" data-layer="0"
+                                            style="position:relative;height:100vh;overflow:hidden;">
+                                            <video tabindex="-1" class="video-stream html5-main-video"
+                                                webkit-playsinline="" playsinline="" controlslist="nodownload"
+                                                style="    
+                                                width: 100%;
+                                                position: fixed;
+                                                z-index: 0;
+                                                left: 0;
+                                                top: 35px;filter: grayscale(1);" src="video/kb-led.mp4" type="video/mp4"
+                                                muted="muted" autoplay="autoplay" loop>
+                                            </video>
+                                        </div>
+                                    </div>
+
+                                    <div class="container">
+                                        <div class="cms-element-image justify-content-start"
+                                            style="position:relative;">
+                                            <!-- <div class="hero-content"
+                                                style="z-index: 11;position:absolute;top:50%;transform: translateY(-50%)">
+                                                <h2 class="hero-title"
+                                                    style="line-height: 1.1;color: #000000;font-size: 62px;font-weight:900;">
+                                                    KB SILVERLINE.PRO<br> LED LEUCHTEN
+                                                </h2>
+                                                <h3 class="hero-subtitle"
+                                                    style="font-size:34px;line-height:1.1;margin-top: 20px;">
+                                                    Das intelligente LED-Lichtsystem<br> für Ihres Unternehmen
+                                                </h3>
+                                                <a class="btn btn-secondary btn-lg rhweb-button" href="/"
+                                                    style="margin-top:30px;">
+                                                    Jetzt ansehen!
+                                                </a>
+                                            </div> -->
+                                            <!-- <div class="w-100" style="padding: 0;">
+                                                <div class="html5-video-container" data-layer="0"
+                                                    style="z-index: 10;position:relative;height:480px;overflow:hidden;">
+                                                    <video tabindex="-1" class="video-stream html5-main-video"
+                                                        webkit-playsinline="" playsinline=""
+                                                        controlslist="nodownload" style="    
+                                                        width: 100%;
+                                                        position: relative;
+                                                        left: 0px;
+                                                        top: 0;
+                                                        height:480px" src="video/kb-led.mp4" type="video/mp4"
+                                                        muted="muted" autoplay="autoplay" loop>
+                                                    </video>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-group">
+
+                <div class="section title-h1 section-separator-bottom">
+                    <div class="section-inner container">
+                        <div class="content">
+                            <h1 class="hero-title">
+                                KB SILVERLINE.PRO INOVATIVE LED LEUCHTEN
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section benefits">
+                    <div class="section-inner container">
+                        <div class="blocks">                                        
+                            <div class="block-item">                                        
+                                <div class="overlay">
+                                    <i class="icon-cus fa fa-lightbulb"></i>
+                                    <div class="txt">
+                                        <div class="h4">Mehr Licht!</div>
+                                        <p>Jederzeit sehr einfach erweiterbar.</p>
+                                    </div>
+                                </div>                                        
+                            </div>
+                            <div class="block-item">                                        
+                                <div class="overlay">
+                                        <i class="icon-cus fab fa-buffer"></i>
+                                    <div class="txt">
+                                        <div class="h4">Mehr Wohlbefinden!</div>
+                                        <p>Präsenzmelder zur punktgenauen Lichtsteuerung.</p>
+                                    </div>
+                                </div>                                        
+                            </div>
+                            <div class="block-item">                                        
+                                <div class="overlay">
+                                    <i class="icon-cus fab fa-windows"></i>
+                                    <div class="txt">
+                                        <div class="h4">Mehr Sicherheit!</div>
+                                        <p>Homogenes Licht für ermüdungsfreies Arbeiten.</p>
+                                    </div>
+                                </div>                                        
+                            </div>
+                            <div class="block-item">                                        
+                                <div class="overlay">
+                                    <i class="icon-cus fas fa-sun"></i>
+                                    <div class="txt">
+                                        <div class="h4">Mehr Leistungtungsfähigkeit!</div>
+                                        <p>Perfekte Farbwiedergabe.</p>
+                                    </div>
+                                </div>                                        
+                            </div>                                        
+                        </div>                                
+                    </div>
+                </div>
+
+                <div class="section beleuchtung">
+                    <div class="section-inner container">
+                        <div class="blocks">
+                            <div class="block-item bg-img">  
+                                <section class="kacheln">
+                                    <div class="boxen">
+                                        <div class="box box-leistung">
+                                            <div class="box-inner">
+                                                <div class="box-leistung--img">
+                                                    <div class="box-leistung-img-hover"
+                                                        style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                    </div>
+                                                </div>
+                                                <div class="box-leistung--content">
+                                                    <div class="box-leistung--inner-blur "
+                                                        style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                    </div>
+                                                    <div class="box-leistung--inner ">
+                                                        <h3
+                                                            style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
+                                                            Büro LED Beleuchtung</h3>
+                                                        <div class="alm--blur-box--content-main">
+                                                            <p>
+                                                                <strong>Effiziente und ermüdungsfreie LED Beleuchtung für Büro nach DIN, dimmbar und mit Blendschutz.</strong>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-leistung---link-container">
+                                                    <a href="/"
+                                                        class="box-leistung--link">
+                                                        <button class="btn btn-leistung">
+                                                            Mehr erfahren
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section> 
+                            </div>
+                            <div class="block-item bg-img">
+                                <section class="kacheln">
+                                    <div class="boxen">
+                                        <div class="box box-leistung">
+                                            <div class="box-inner">
+                                                <div class="box-leistung--img">
+                                                    <div class="box-leistung-img-hover"
+                                                        style="background-image: url(https://www.kb-led-leuchten.de/media/image/36/30/48/kb-led-leuchten-led-flur-und-treppenbeleuchtung.jpg);">
+                                                    </div>
+                                                </div>
+                                                <div class="box-leistung--content">
+                                                    <div class="box-leistung--inner-blur "
+                                                        style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                    </div>
+                                                    <div class="box-leistung--inner ">
+                                                        <h3
+                                                            style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
+                                                            Lager Beleuchtung</h3>
+                                                        <div class="alm--blur-box--content-main">
+                                                            <p>
+                                                                <strong>Energieeffiziente LED Lagerhallenbeleuchtungmit Anwesenheits-Schaltung.</strong>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-leistung---link-container"> 
+                                                    <a href="/" class="box-leistung--link"> 
+                                                        <button
+                                                            class="btn btn-leistung">Mehr
+                                                            erfahren</button> 
+                                                    </a> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="block-item bg-img">                                        
+                                <section class="kacheln">
+                                    <div class="boxen" style="position">
+                                        <div class="box box-leistung">
+                                            <div class="box-inner">
+                                                <div class="box-leistung--img">
+                                                    <div class="box-leistung-img-hover"
+                                                        style="background-image: url(https://www.kb-led-leuchten.de/media/image/03/7c/fc/kb-led-leuchten-led-hallen-lager-led-beleuchtung.jpg);">
+                                                    </div>
+                                                </div>
+                                                <div class="box-leistung--content">
+                                                    <div class="box-leistung--inner-blur "
+                                                        style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                    </div>
+                                                    <div class="box-leistung--inner ">
+                                                        <h3
+                                                            style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
+                                                            Verkaufsraum Beleuchtung</h3>
+                                                        <div class="alm--blur-box--content-main">
+                                                            <p><strong>Energieeffiziente LED
+                                                                    Verkaufsraumbeleuchtung mit
+                                                                    perfekter
+                                                                    Warenpräsentation</strong></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-leistung---link-container"> 
+                                                    <a href="/" class="box-leistung--link"> 
+                                                        <button
+                                                            class="btn btn-leistung">Mehr
+                                                            erfahren</button> 
+                                                    </a> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>                                        
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="section desc">
+                    <div class="section-inner container">
+                        <div class="blocks"> 
+                            <div class="block-item"> 
+                                <div class="desc--title">                                             
+                                    Das intelligente LED-Lichtsystem für alle Arbeits - und Verkehrsbereiche Ihres Unternehmen
+                                </div> 
+                                <div class="desc--content"> 
+                                    <p>                                                
+                                        Mit unserem neuen <strong>KB SILVERLINE.PRO LED LEUCHTEN</strong> decken wir alle Beleuchtungsanforderungen Ihres Unternehmens ab: Von der Verwaltung bis zu Produktion und Lager bringt unser System die erforderliche Lichtstärke und Farbtemperatur in Verkehrsbereiche und auf Arbeitsplätze. </span></p> <p style="text-align: center;"><span style="font-size: medium;" data-mce-mark="1">Elegant im Design, durchdacht konstruiert, variabel, einfach in der Montage und&nbsp;<strong>„Made in Germany“</strong>.</span></p> <p style="text-align: center;"><span style="font-size: medium;" data-mce-mark="1">Verschiedene Längen kombinierbar einfach erweiterbar, auch nachträglich!</span></p> <p style="text-align: center;"><span style="font-size: medium;" data-mce-mark="1">
+                                        <strong>Schön, schlank und anwenderfreundlich: KB SILVERLINE.PRO LED LEUCHTEN - die helle Freude!</strong>
+                                    </p> 
+                                </div> 
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section play-video">
+                    <div class="section-inner container">
+                        <div class="f-video-container">
+                            <div class="f-video-player"></div>
+                            <div id="1" class="f-video-cover" data-video="sR0s-ou5GyM">
+                                <section class="kacheln"> 
+                                    <div class="boxen"> 
+                                        <div class="box box-leistung"> 
+                                            <div class="box-inner"> 
+                                                <div class="box-leistung--img"> 
+                                                    <div class="box-leistung-img-hover"></div> 
+                                                </div> 
+                                                <div class="box-leistung--content"> 
+                                                    <div class="box-leistung--inner-blur"></div> 
+                                                    <div class="box-leistung--inner"> 
+                                                        <h3>LIGHTING PROFESSIONAL SOLUTIONS</h3> 
+                                                        <div class="alm--blur-box--content-main"> 
+                                                            <p>
+                                                                <strong><span style="font-size: large;">
+                                                                Wir entwerfen und entwickeln&nbsp;LED-Lichtsystem nach Ihren Bedürfnissen.</span></strong>
+                                                            </p> 
+                                                        </div>
+                                                        <div class="box-leistung---link-container">  
+                                                            <button class="btn btn-leistung" 
+                                                                style="background: #fed700; color: #000;top: 56%;">
+                                                                Play Video
+                                                            </button> 
+                                                        </div>
+                                                    </div> 
+                                                </div> 
+                                            </div> 
+                                        </div> 
+                                    </div> 
+                                </section>
+                            </div>
+                        </div>     
+                    </div>    
+                </div>
+
+                <div class="section erfolge">
+                    <div class="section-inner container">
+                        <div class="blocks">
+                            <div class="info-place"> 
+                                <div style="width:90%;margin: auto;"> 
+                                    <div style="text-align: center; position: relative;"> 
+                                        <div class="leyba"> 
+                                            <i class="fas fa-medal" style="color: #000;font-size: 32px;"></i> 
+                                        </div> 
+                                    </div> 
+                                    
+                                    <div class="infoled"> 
+                                        <h3>Höchste Qualität</h3> 
+                                        <hr>
+                                        <p class="infoled-p"> Gesundes Licht ist eine Frage der Zutaten<br> Zutaten für die <strong>KB SILVERLINE.PRO LED Leuchten</strong> sind sowohl die herausragende Qualität der verwendeten LED als auch ein jahrzehntelanges Know-how in Elektronik und Steuerungstechnik. Damit schaffen unsere <strong>LED-Leuchtensysteme</strong> homogenes, flimmerfreies Arbeitslicht über die gesamte Lebensdauer der Leuchtmittel. </p>
+                                        <div style="width: 100%;margin: auto;"> 
+                                            <button class="infoled-btn"> 
+                                                <a href="/lighting-professional-solutions/" style="color: #253237;">Lighting Solutions</a> 
+                                            </button> 
+                                        </div> 
+                                    </div>
+                                </div> 
+                            </div>
+                            
+                            <div class="info-place"> 
+                                <div style="width:90%;margin: auto;"> 
+                                    <div style="text-align: center; position: relative;"> 
+                                        <div class="leyba"> 
+                                            <i class="fas fa-clipboard-list" style="color: #000;font-size: 32px;"></i> 
+                                        </div> 
+                                    </div> 
+                                    
+                                    <div class="infoled"> 
+                                        <h3> Persönliche Beratung</h3> 
+                                        <hr>
+                                        <p class="infoled-p"> 
+                                            Zögern Sie nicht - jetzt Kontakt aufnehmen und kostenlos beraten lassen! 
+                                            Rufen Sie uns jetzt an:
+                                            <strong>
+                                                <a href="tel:+496343934720">+49 6343 93472-0</a>
+                                            </strong>
+                                            <br> oder schreiben Sie eine E-Mail an:
+                                            <br> 
+                                            <strong>
+                                                <a href="mailto:info@kb-led-leuchten.de">info@kb-led-leuchten.de</a>
+                                            </strong> 
+                                            <br>und vereinbaren Sie mit Unseren LED BELEUCHTUNG PROFIS einen Termin. Wir sind gespannt auf Ihr Projekt!
+                                            <!-- Unsere <strong>KB SILVERLINE.PRO LED Leuchten</strong> sind nicht nur energieeffizient, sie sind auch nachhaltig in Produktion, Lichtmanagement und Wartung. Unsere <strong>LED Leuchtmittel</strong> sind nach ihrer langen Lebensdauer einfach mit ein paar Handgriffen austauschbar, sowohl Leuchte wie auch Installation bleiben <strong>resourcenschonend</strong> erhalten.  -->
+                                        </p>                                            
+                                        <div style="width: 100%;margin: auto;"> 
+                                            <button class="infoled-btn"> 
+                                                <a href="/referenzen/" style="color: #253237;">Referenzen</a> 
+                                            </button> 
+                                        </div> 
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="info-place"> 
+                                <div style="width:90%;margin: auto;"> 
+                                    <div style="text-align: center; position: relative;"> 
+                                        <div class="leyba"> 
+                                            <i class="fas fa-leaf" style="color: #000;font-size: 32px;"></i> 
+                                        </div> 
+                                    </div>                                          
+                                    <div class="infoled"> 
+                                        <h3>Nachhaltig</h3> 
+                                        <hr>
+                                        <p class="infoled-p"> Unsere <strong>KB SILVERLINE.PRO LED Leuchten</strong> sind nicht nur energieeffizient, sie sind auch nachhaltig in Produktion, Lichtmanagement und Wartung. Unsere <strong>LED Leuchtmittel</strong> sind nach ihrer langen Lebensdauer einfach mit ein paar Handgriffen austauschbar, sowohl Leuchte wie auch Installation bleiben <strong>resourcenschonend</strong> erhalten. </p>
+                                        <div style="width: 100%;margin: auto;"> 
+                                            <button class="infoled-btn"> 
+                                                <a href="/led-leuchten/" style="color: #253237;">LED Leuchten</a> 
+                                            </button> 
+                                        </div> 
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section beleuchtung">
+                    <div class="section-inner container">
+                        <div class="blocks">
+                            <div class="block-item bg-img">  
+                                <section class="kacheln">
+                                    <div class="boxen">
+                                        <div class="box box-leistung">
+                                            <div class="box-inner">
+                                                <div class="box-leistung--img">
+                                                    <div class="box-leistung-img-hover"
+                                                        style="background-image: url(https://www.kb-led-leuchten.de/media/image/5c/d5/07/kb-led-leutchen-buero-led-beleuchtung-buero-led-lampen-1.jpg);">
+                                                    </div>
+                                                </div>
+                                                <div class="box-leistung--content">
+                                                    <div class="box-leistung--inner-blur "
+                                                        style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                    </div>
+                                                    <div class="box-leistung--inner ">
+                                                        <h3
+                                                            style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
+                                                            Meetingraum Beleuchtung</h3>
+                                                        <div class="alm--blur-box--content-main">
+                                                            <p>
+                                                                <strong>Elegante und energieeffiziente Meeting- und Konferezraumbeleuchtung</strong>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-leistung---link-container">
+                                                    <a href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
+                                                        class="box-leistung--link">
+                                                        <button class="btn btn-leistung"
+                                                            style="background: #fed700; color: #000000;">
+                                                            Mehr erfahren
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="block-item bg-img">
+                                <section class="kacheln">
+                                    <div class="boxen" style="position">
+                                        <div class="box box-leistung">
+                                            <div class="box-inner">
+                                                <div class="box-leistung--img">
+                                                    <div class="box-leistung-img-hover"
+                                                        style="background-image: url(https://www.kb-led-leuchten.de/media/image/69/b3/de/kb-led-leuchten-led-industriebeleuchtung-led-hallenbeleuchtung.jpg);">
+                                                    </div>
+                                                </div>
+                                                <div class="box-leistung--content">
+                                                    <div class="box-leistung--inner-blur "
+                                                        style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                    </div>
+                                                    <div class="box-leistung--inner ">
+                                                        <h3
+                                                            style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
+                                                            Industrie LED Beleuchtung</h3>
+                                                        <div class="alm--blur-box--content-main">
+                                                            <p>
+                                                                <strong>Energieeffiziente Produktionshallenbeleuchtung für ermüdungsfreies, sicheres Arbeiten.</strong>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-leistung---link-container"> <a
+                                                        href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
+                                                        class="box-leistung--link"> <button
+                                                            class="btn btn-leistung"
+                                                            style="background: #fed700; color: #000000;">Mehr
+                                                            erfahren</button> </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="block-item bg-img">                                        
+                                <section class="kacheln">
+                                    <div class="boxen" style="position">
+                                        <div class="box box-leistung">
+                                            <div class="box-inner">
+                                                <div class="box-leistung--img">
+                                                    <div class="box-leistung-img-hover"
+                                                        style="background-image: url(https://www.kb-led-leuchten.de/media/image/20/22/9b/kb-led-leuchten-led-arbeitsplatzbeleuchtung.jpg);">
+                                                    </div>
+                                                </div>
+                                                <div class="box-leistung--content">
+                                                    <div class="box-leistung--inner-blur "
+                                                        style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                    </div>
+                                                    <div class="box-leistung--inner ">
+                                                        <h3
+                                                            style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
+                                                            Arbeitsplatz LED Beleuchtung</h3>
+                                                        <div class="alm--blur-box--content-main">
+                                                            <p>
+                                                                <strong>Industrie-Arbeitsplatzbeleuchtung nach DIN, dimmbar und mit Blendschutz.</strong>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-leistung---link-container"> <a
+                                                        href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
+                                                        class="box-leistung--link"> <button
+                                                            class="btn btn-leistung"
+                                                            style="background: #fed700; color: #000000;">Mehr
+                                                            erfahren</button> </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>                                        
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="section about">
+                    <div class="section-inner container">
+                        <div class="column--content"> 
+                            <h1 style="text-align: center;">Herzlich willkommen im K + B LED Leuchtenshop</h1> 
+                            <h2 style="text-align: center;">
+                                <a title="LIGHTING PROFESSIONAL SOLUTION" href="https://www.kb-led-leuchten.de/lighting-professional-solutions/" target="_self">
+                                    <span style="color:#fed700;">✚ LIGHTING PROFESSIONAL SOLUTION ✚</span>
+                                </a>
+                            </h2> 
+                            <p style="text-align: center;">
+                                Wir befassen uns schon seit über <strong>30 Jahren mit LED Technik</strong> und haben weit vor der Verwendung von LED´s als Lichtquelle große Erfahrungen in dem Bereich gesammelt. Dieses über Jahrzehnte gewachsene Know-how nutzt die K + B lighting systems GmbH für die <strong>Entwicklung und Produktion professioneller LED Licht-Lösungen 
+                                    <span style="text-decoration: underline; color:#fed700;">made in Germany</span>.</strong>
+                            </p> 
+                            <p style="text-align: center;">Mit über 70 Mitarbeitern entwickelt und produziert die 
+                                <span style="text-decoration: underline;">
+                                    <span style="color:#fed700;">
+                                        <a title="KB Electronic" href="http://www.kb-electronic.de/" target="_blank" rel="nofollow noopener">
+                                            <span style="color:#fed700;">
+                                                <strong>K + B Gruppe</strong></span>
+                                        </a>
+                                    </span>
+                                </span> an den zwei Standorten in Schelklingen und Bad Bergzabern elektrotechnische und elektronische Lösungen.
+                            </p> 
+                            <p style="text-align: center;">Bei einer guten 
+                                <span style="text-decoration: underline;">
+                                    <span style="color:#fed700;">
+                                        <strong><a title="LED Lampen Online Shop" href="https://www.kb-led-leuchten.de/led-leuchten/" target="_self">
+                                            <span style="color:#fed700; text-decoration: underline;">LED Lampe</span></a></strong></span>
+                                    </span> kommt es auf so viele Faktoren an, <strong>Qualität der LED´s</strong>, Farbtemperatur, Wiedergabeindex, Wärmemanagement, Vorschaltgeräte und vieles mehr.
+                            </p> 
+                            <p style="text-align: center;">Wir produzieren in höchster <strong>Qualität und modernster Technik</strong>. Wir stehen für <strong>ressourcenschonenden und nachhaltigen Umgang von Rohstoffen</strong>. Wir möchten mit unserer Erfahrung den Kunden bei LED Beleuchtungs Projekten bestens beraten und versuchen ihm die energiesparendste und kostengünstigste Lösung anzubieten.
+                            </p> 
+                            <p style="text-align: center;">Bereits bei der Entwicklung unserer <strong>LED Leuchte KB Silverline.Pro</strong> haben wir auf ein <strong>umweltschonendes und nachhaltiges Produkt</strong> geachtet, dass unsere LED Leuchte Modular aufgebaut, jederzeit erweiterbar und Flexibel für unterschiedlichste Anwendungen verwendbar ist. Damit kann mit nur einem Modell sämtliche Anforderungen und Bereiche erfüllt werden. Auch auf eine kostengünstige Montage haben wir bei der Entwicklung geachtet, somit können bei der <strong>KB Silverline.PRO LED Leuchte</strong> alle verbauten Teile, einzeln bis hin zu den einzelnen <strong>LED Streifen</strong> nahezu <strong>Werkzeuglos ausgetauscht</strong> werden. Somit haben wir bereits heute einen wichtigen Schritt der <strong>Nachhaltigkeit</strong> für eine spätere Entsorgung vorgesorgt.
+                            </p> 
+                            <p style="text-align: left;">Auch die vielen Faktoren auf die wir achten, führen zu einer langlebigen, nachhaltigen 
+                                <span style="text-decoration: underline;"><span style="color:#fed700;">
+                                    <a title="Arbeitsplatz LED Leuchten" href="https://www.kb-led-leuchten.de/arbeitsplatz-gewerbe-beleuchtung/" target="_self">
+                                        <span style="color:#fed700;"><strong>LED Leuchten</strong></span>
+                                    </a></span></span> mit einem gesunden Licht für Mensch, Tier und Pflanzen.
+                            </p> 
+                            <p style="text-align: center;">
+                                <span style="text-decoration: underline;">
+                                    <span style="color:#fed700;">
+                                        <a title="LED Leuchten Shop Anfrage Formular" href="https://www.kb-led-leuchten.de/anfrage-formular" target="_self">
+                                            <span style="color: #fed700;"><strong>Wir freuen uns auf Sie auf Ihr Interesse und Ihren Fragen.</strong></span>
+                                        </a></span></span>
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <div class="newsletter rhweb-footer-newsletter-container footer-above">
+        <div class="container">
+            <div class="newsletter-r">
+                <div class="infotext">
+                    <div class="h3 newsletter-headline">Newsletter</div>
+                    <p>Abonnieren Sie jetzt unseren regelmäßig erscheinenden Newsletter, um rechtzeitig über neue Produkte
+                        und Angebote informiert zu werden.</p>
+                </div>
+                <div class="cms-block cms-block-form">
+                    <div class="cms-element-form">
+                        <form action="/form/newsletter" method="post" data-form-csrf-handler="true"
+                            data-form-validation="true">
+                            <div class="rhweb-newsletter-form-container">
+                                <div class="form-group ">
+                                    <label class="form-label" for="form-email">E-Mail-Adresse* </label>
+                                    <input name="email" type="email" id="form-email" value=""
+                                        placeholder="E-Mail-Adresse eingeben ..." required="required" class="form-control">
+                                </div>
+                                <button type="submit" aria-label="Submit" class="btn">
+                                    <span class="icon icon-arrow-right">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            width="24" height="24" viewBox="0 0 24 24">
+                                            <defs>
+                                                <path
+                                                    d="m20.5858 13-4.293 4.2929c-.3904.3905-.3904 1.0237 0 1.4142.3906.3905 1.0238.3905 1.4143 0l6-6c.3905-.3905.3905-1.0237 0-1.4142l-6-6c-.3905-.3905-1.0237-.3905-1.4142 0-.3905.3905-.3905 1.0237 0 1.4142L20.5858 11H1c-.5523 0-1 .4477-1 1s.4477 1 1 1h19.5858z"
+                                                    id="icons-default-arrow-right"></path>
+                                            </defs>
+                                            <use xlink:href="#icons-default-arrow-right" fill="#758CA3" fill-rule="evenodd">
+                                            </use>
+                                        </svg>
+                                    </span> </button>
+                            </div>
+                            <div class="rhweb-captcha-container">
+                                <div class="shopware_surname_confirm">
+                                    <input type="text" name="shopware_surname_confirm" class="d-none" value="" tabindex="-1"
+                                        autocapitalize="off" spellcheck="false" autocorrect="off" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="rhweb-newsletter-privacy">
+                                <div>Datenschutz*</div>
+                                <div class="form-text privacy-notice form-check">
+                                    <input name="privacy" type="checkbox" class="form-check-input" id="form-privacy-opt-in-"
+                                        required="">
+                                    <label for="form-privacy-opt-in-" class="form-check-label">
+                                        Ich habe die <a data-ajax-modal="true"
+                                            data-url="/widgets/cms/018cf30c8773716d8221105ad7f2cd9a"
+                                            href="/widgets/cms/018cf30c8773716d8221105ad7f2cd9a"
+                                            title="Datenschutzbestimmungen">Datenschutzbestimmungen</a> zur Kenntnis
+                                        genommen und die <a data-ajax-modal="true"
+                                            data-url="/widgets/cms/018cf30c87717112a2b10d9c5d2fa8b3"
+                                            href="/widgets/cms/018cf30c87717112a2b10d9c5d2fa8b3" title="AGB">AGB</a> gelesen
+                                        und bin mit ihnen einverstanden.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-hidden-fields">
+                                <input type="hidden" name="option" value="subscribe">
+                                <input type="submit" class="submit--hidden d-none">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="newsletter-l">
+                <i class="fas fa-mail-bulk"></i>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-main">
+        <div class="container">
+            <div id="footerColumns" class="row footer-columns" data-collapse-footer-columns="true" role="list">
+                <div class="col-md-4 footer-column js-footer-column">
+                    <div class="footer-column-headline footer-headline js-footer-column-headline js-collapse-footer-column-trigger"
+                        id="collapseFooterHotlineTitle" data-bs-target="#collapseFooterHotline" aria-expanded="true"
+                        aria-controls="collapseFooterHotline" role="listitem">
+                        Service-Hotline
+                        <div class="footer-column-toggle">
+                            <span class="footer-plus-icon">
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <defs>
+                                            <path
+                                                d="M11 11V3c0-.5523.4477-1 1-1s1 .4477 1 1v8h8c.5523 0 1 .4477 1 1s-.4477 1-1 1h-8v8c0 .5523-.4477 1-1 1s-1-.4477-1-1v-8H3c-.5523 0-1-.4477-1-1s.4477-1 1-1h8z"
+                                                id="icons-default-plus"></path>
+                                        </defs>
+                                        <use xlink:href="#icons-default-plus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                            <span class="footer-minus-icon">
+                                <span class="icon icon-minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <defs>
+                                            <path id="icons-default-minus"
+                                                d="M3 13h18c.5523 0 1-.4477 1-1s-.4477-1-1-1H3c-.5523 0-1 .4477-1 1s.4477 1 1 1z">
+                                            </path>
+                                        </defs>
+                                        <use xlink:href="#icons-default-minus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                        </div>
+                    </div>
+                    <div id="collapseFooterHotline"
+                        class="footer-column-content collapse js-footer-column-content footer-contact"
+                        aria-labelledby="collapseFooterHotlineTitle" role="listitem">
+                        <div class="footer-column-content-inner">
+                            <p class="footer-contact-hotline">
+                                elefonische Unterstützung und Beratung unter: <a href="tel:+49634393472">+49 6343 93472-0</a> Mo-Fr,
+                                09:00 - 17:00 Uhr
+                            </p>
+                        </div>
+                        <div class="footer-contact-form">
+                            Oder über unser <a data-ajax-modal="true"
+                                data-url="/widgets/cms/018cf30c862871dbacb863b64c1ffb0f"
+                                href="/widgets/cms/018cf30c862871dbacb863b64c1ffb0f"
+                                title="Kontaktformular">Kontaktformular</a>.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-column js-footer-column">
+                    <div class="footer-column-headline footer-headline js-collapse-footer-column-trigger"
+                        data-bs-target="#collapseFooterTitle1" aria-expanded="true" aria-controls="collapseFooter1">
+                        <a href="https://tronic.shopware-theme.de/Shop-Info/" title="Shop Info">
+                            Shop Servise
+                        </a>
+                        <div class="footer-column-toggle">
+                            <span class="footer-plus-icon">
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-plus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                            <span class="footer-minus-icon">
+                                <span class="icon icon-minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-minus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                        </div>
+                    </div>
+                    <div id="collapseFooter1" class="footer-column-content collapse js-footer-column-content"
+                        aria-labelledby="collapseFooterTitle1">
+                        <div class="footer-column-content-inner">
+                            <ul class="list-unstyled">
+                                <li class="footer-link-item">
+                                    <a class="footer-link"
+                                        href="https://tronic.shopware-theme.de/Shop-Info/Datenschutz/"
+                                        title="Datenschutz">
+                                        Datenschutz
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a class="footer-link" href="https://tronic.shopware-theme.de/Shop-Info/Impressum/"
+                                        title="Impressum">
+                                        Impressum
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a class="footer-link" href="https://tronic.shopware-theme.de/Shop-Info/AGB/"
+                                        title="AGB">
+                                        AGB
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a class="footer-link"
+                                        href="https://tronic.shopware-theme.de/Shop-Info/Fragen-Antworten/"
+                                        title="Fragen &amp; Antworten">
+                                        Fragen &amp; Antworten
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a class="footer-link" href="https://tronic.shopware-theme.de/Shop-Info/Kontakt/"
+                                        title="Kontakt">
+                                        Kontakt
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-column js-footer-column">
+                    <div class="footer-column-headline footer-headline js-collapse-footer-column-trigger"
+                        data-bs-target="#collapseFooterTitle2" aria-expanded="true" aria-controls="collapseFooter2">
+                        <a href="https://tronic.shopware-theme.de/Quicklinks/" title="Quicklinks">
+                            Quicklinks
+                        </a>
+                        <div class="footer-column-toggle">
+                            <span class="footer-plus-icon">
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-plus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                            <span class="footer-minus-icon">
+                                <span class="icon icon-minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-minus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                        </div>
+                    </div>
+                    <div id="collapseFooter2" class="footer-column-content collapse js-footer-column-content"
+                        aria-labelledby="collapseFooterTitle2">
+                        <div class="footer-column-content-inner">
+                            <ul class="list-unstyled">
+                                <li class="footer-link-item">
+                                    <a class="footer-link" href="https://tronic.shopware-theme.de/Quicklinks/Lieferung/"
+                                        title="Lieferung">
+                                        Lieferung
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a class="footer-link" href="https://tronic.shopware-theme.de/Quicklinks/UEber-Uns/"
+                                        title="Über Uns">
+                                        Über Uns
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a class="footer-link"
+                                        href="https://tronic.shopware-theme.de/Quicklinks/Versandkosten/"
+                                        title="Versandkosten">
+                                        Versandkosten
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a class="footer-link"
+                                        href="https://tronic.shopware-theme.de/Quicklinks/Widerrufsrecht/"
+                                        title="Widerrufsrecht">
+                                        Widerrufsrecht
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a class="footer-link"
+                                        href="https://tronic.shopware-theme.de/Quicklinks/Zahlungsarten/"
+                                        title="Zahlungsarten">
+                                        Zahlungsarten
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-column js-footer-column">
+                    <div class="footer-column-headline footer-headline js-collapse-footer-column-trigger"
+                        data-bs-target="#collapseFooterTitle3" aria-expanded="true" aria-controls="collapseFooter3">
+                        <a href="https://tronic.shopware-theme.de/Reseller/" title="Reseller">
+                            Reseller
+                        </a>
+                        <div class="footer-column-toggle">
+                            <span class="footer-plus-icon">
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-plus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                            <span class="footer-minus-icon">
+                                <span class="icon icon-minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-minus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                        </div>
+                    </div>
+                    <div id="collapseFooter3" class="footer-column-content collapse js-footer-column-content"
+                        aria-labelledby="collapseFooterTitle3">
+                        <div class="footer-column-content-inner">
+                            <ul class="list-unstyled">
+                                <li class="footer-link-item">
+                                    <a class="footer-link"
+                                        href="https://tronic.shopware-theme.de/Reseller/Reseller-Partner/"
+                                        title="Reseller &amp; Partner">
+                                        Reseller &amp; Partner
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a class="footer-link" href="https://tronic.shopware-theme.de/Reseller/Affiliate/"
+                                        title="Affiliate">
+                                        Affiliate
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a class="footer-link" href="https://tronic.shopware-theme.de/Reseller/Kontakt/"
+                                        title="Kontakt">
+                                        Kontakt
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a class="footer-link"
+                                        href="https://tronic.shopware-theme.de/Reseller/Mehr-Informationen/"
+                                        title="Mehr Informationen">
+                                        Mehr Informationen
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rhweb-auto-columns footer-columns" data-collapse-footer-columns="true" role="list">
+                <div class="rhweb-auto-column rhweb-footer-column-logos footer-column js-footer-column">
+                    <div class="footer-column-headline footer-headline js-footer-column-headline js-collapse-footer-column-trigger"
+                        id="collapseFooterPaymentTitle" data-bs-target="#collapseFooterPayment" aria-expanded="true"
+                        aria-controls="collapseFooterPayment">
+                        Zahlungsmethoden
+                        <div class="footer-column-toggle">
+                            <span class="footer-plus-icon">
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-plus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                            <span class="footer-minus-icon">
+                                <span class="icon icon-minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-minus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                        </div>
+                    </div>
+                    <div id="collapseFooterPayment" class="footer-column-content collapse js-footer-column-content"
+                        aria-labelledby="collapseFooterPaymentTitle">
+                        <div class="footer-column-content-inner">
+                            <div class="footer-logo is-payment">
+                                <img src="images/rhweb-barzahlen.svg" class="img-fluid footer-logo-image"
+                                    alt="Barzahlung - Demo" title="Barzahlung - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-payment">
+                                <img src="images/rhweb-paypal.svg" class="img-fluid footer-logo-image"
+                                    alt="PayPal - Demo" title="PayPal - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-payment">
+                                <img src="images/rhweb-mastercard-v2.svg" class="img-fluid footer-logo-image"
+                                    alt="Mastercard - Demo" title="Mastercard - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-payment">
+                                <img src="images/rhweb-klarna-v2.svg" class="img-fluid footer-logo-image"
+                                    alt="Klarna - Demo" title="Klarna - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-payment">
+                                <img src="images/rhweb-visa.svg" class="img-fluid footer-logo-image" alt="Visa - Demo"
+                                    title="Visa - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-payment">
+                                <img src="images/rhweb-amazon-pay.svg" class="img-fluid footer-logo-image"
+                                    alt="Amazon Pay - Demo" title="Amazon Pay - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-payment">
+                                <img src="images/rhweb-apple-pay.svg" class="img-fluid footer-logo-image"
+                                    alt="Apple Pay - Demo" title="Apple Pay - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-payment">
+                                <img src="images/rhweb-twint.svg" class="img-fluid footer-logo-image" alt="Twint - Demo"
+                                    title="Twint - Demo" loading="eager">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rhweb-auto-column rhweb-footer-column-logos footer-column js-footer-column">
+                    <div class="footer-column-headline footer-headline js-footer-column-headline js-collapse-footer-column-trigger"
+                        id="collapseFooterShippingTitle" data-bs-target="#collapseFooterShipping" aria-expanded="true"
+                        aria-controls="collapseFooterShipping">
+                        Versandmethoden
+                        <div class="footer-column-toggle">
+                            <span class="footer-plus-icon">
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-plus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                            <span class="footer-minus-icon">
+                                <span class="icon icon-minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-minus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                        </div>
+                    </div>
+                    <div id="collapseFooterShipping" class="footer-column-content collapse js-footer-column-content"
+                        aria-labelledby="collapseFooterShippingTitle">
+                        <div class="footer-column-content-inner">
+                            <div class="footer-logo is-shipping">
+                                <img src="images/rhweb-gls-alt.svg" class="img-fluid footer-logo-image" alt="GLS - Demo"
+                                    title="GLS - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-shipping">
+                                <img src="images/rhweb-dhl-express.svg" class="img-fluid footer-logo-image"
+                                    alt="DHL - Demo" title="DHL - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-shipping">
+                                <img src="images/rhweb-dpd.svg" class="img-fluid footer-logo-image" alt="DPD - Demo"
+                                    title="DPD - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-shipping">
+                                <img src="images/rhweb-dpd-express.svg" class="img-fluid footer-logo-image"
+                                    alt="DPD Express - Demo" title="DPD Express - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-shipping">
+                                <img src="images/rhweb-fedex.svg" class="img-fluid footer-logo-image" alt="FedEx - Demo"
+                                    title="FedEx - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-shipping">
+                                <img src="images/rhweb-fedex-express.svg" class="img-fluid footer-logo-image"
+                                    alt="FedEx Express - Demo" title="FedEx Express - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-shipping">
+                                <img src="images/rhweb-hermes.svg" class="img-fluid footer-logo-image"
+                                    alt="Hermes - Demo" title="Hermes - Demo" loading="eager">
+                            </div>
+                            <div class="footer-logo is-shipping">
+                                <img src="images/rhweb-post-switzerland-v2.svg" class="img-fluid footer-logo-image"
+                                    alt="Swiss Post - Demo" title="Swiss Post - Demo" loading="eager">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rhweb-auto-column footer-column js-footer-column">
+                    <div class="footer-column-headline footer-headline js-footer-column-headline js-collapse-footer-column-trigger"
+                        id="collapseFooterSocialsTitle" data-bs-target="#collapseFooterSocials" aria-expanded="true"
+                        aria-controls="collapseFooterSocials">
+                        Social Media
+                        <div class="footer-column-toggle">
+                            <span class="footer-plus-icon">
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-plus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                            <span class="footer-minus-icon">
+                                <span class="icon icon-minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-minus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                        </div>
+                    </div>
+                    <div id="collapseFooterSocials" class="footer-column-content collapse js-footer-column-content"
+                        aria-labelledby="collapseFooterSocialsTitle">
+                        <div class="footer-column-content-inner">
+                            <div class="rhweb-socials">
+                                <a class="rhweb-social-button" aria-label="Facebook Page" target="_blank" rel="noopener"
+                                    href="https://facebook.com" title="Facebook">
+                                    <span class="icon icon-facebook">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                            <path
+                                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a class="rhweb-social-button" aria-label="X / Twitter Page" target="_blank"
+                                    rel="noopener" href="https://twitter.com" title="X / Twitter">
+                                    <span class="icon icon-x-twitter">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                                            <path
+                                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a class="rhweb-social-button" aria-label="Instagram Page" target="_blank"
+                                    rel="noopener" href="https://instagram.com" title="Instagram">
+                                    <span class="icon icon-instagram">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                            <path
+                                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a class="rhweb-social-button" aria-label="Youtube Page" target="_blank" rel="noopener"
+                                    href="https://youtube.com" title="Youtube">
+                                    <span class="icon icon-youtube">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 576 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                            <path
+                                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a class="rhweb-social-button" aria-label="Appstore Page" target="_blank" rel="noopener"
+                                    href="https://apple.com" title="Appstore">
+                                    <span class="icon icon-appstore">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                            <path
+                                                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a class="rhweb-social-button" aria-label="Google Play Page" target="_blank"
+                                    rel="noopener" href="https://google.com" title="Google Play">
+                                    <span class="icon icon-googleplay">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                            <path
+                                                d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rhweb-auto-column footer-column js-footer-column">
+                    <div class="footer-column-headline footer-headline js-footer-column-headline js-collapse-footer-column-trigger"
+                        id="collapseFooterCertificatesTitle" data-bs-target="#collapseFooterCertificates"
+                        aria-expanded="true" aria-controls="collapseFooterCertificates">
+                        Zertifikate
+                        <div class="footer-column-toggle">
+                            <span class="footer-plus-icon">
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-plus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                            <span class="footer-minus-icon">
+                                <span class="icon icon-minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#icons-default-minus" fill="#758CA3" fill-rule="evenodd"></use>
+                                    </svg>
+                                </span> </span>
+                        </div>
+                    </div>
+                    <div id="collapseFooterCertificates" class="footer-column-content collapse js-footer-column-content"
+                        aria-labelledby="collapseFooterCertificatesTitle">
+                        <div class="footer-column-content-inner">
+                            <div class="rhweb-certificates">
+                                <div class="rhweb-certificate">
+                                    <a href="https://reputationboost.trustedshops.com/?a_aid=009KMWKKM1V19MZ56A97"
+                                        target="_blank" rel="noopener">
+                                        <img alt="certificate" title="" src="images/tronic_certificate_1.png">
+                                    </a>
+                                </div>
+                                <div class="rhweb-certificate">
+                                    <a href="https://reputationboost.trustedshops.com/?a_aid=009KMWKKM1V19MZ56A97"
+                                        target="_blank" rel="noopener">
+                                        <img alt="certificate" title="" src="images/tronic_certificate_2.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <ul class="footer-service-menu-list list-unstyled">
+                    <li class="footer-service-menu-item"><a class="footer-service-menu-link"
+                            href="https://tronic.shopware-theme.de/Servicepunkt-1/" title="Servicepunkt 1">
+                            Servicepunkt 1
+                        </a></li>
+                    <li class="footer-service-menu-item"><a class="footer-service-menu-link"
+                            href="https://tronic.shopware-theme.de/Servicepunkt-2/" title="Servicepunkt 2">
+                            Servicepunkt 2
+                        </a></li>
+                    <li class="footer-service-menu-item"><a class="footer-service-menu-link"
+                            href="https://tronic.shopware-theme.de/Servicepunkt-3/" title="Servicepunkt 3">
+                            Servicepunkt 3
+                        </a></li>
+                </ul>
+            </div>
+            <div class="footer-vat">
+                <p>
+                    * Alle Preise inkl. gesetzl. Mehrwertsteuer zzgl. <a data-ajax-modal="true"
+                        href="/widgets/cms/018cf30c87707174975a31f2569c9f1e"
+                        data-url="/widgets/cms/018cf30c87707174975a31f2569c9f1e">Versandkosten</a> und ggf.
+                    Nachnahmegebühren, wenn nicht anders angegeben.
+                </p>
+            </div>
+            <div class="py-md-3">
+                <div class="text-center">
+                    Individuelles Copyright von <a href="https://google.com" target="_blank" rel="noopener">Muster
+                        GmbH</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="d-none d-lg-block rhweb-contact-widget-container x-right shadow">
+        <div id="rhweb-contact-widget-opener" class="btn btn-primary rhweb-contact-widget-opener">
+            Schnellkontakt Widget
+        </div>
+        <div class="rhweb-contact-widget-content">
+            <div class="container">
+                <div class="row align-items-center py-3 border-bottom">
+                    <div class="col-5 px-3">
+                        <img src="images/contactWidget.jpg">
+                    </div>
+                    <div class="col-7 px-2">
+                        <div class="contact-row">
+                            <span class="contact-icon">
+                                <span class="icon icon-envelope-solid">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                        <path
+                                            d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z">
+                                        </path>
+                                    </svg>
+                                </span> </span>
+                            <span class="contact-text">
+                                <a href="mailto:info@example.com">info@example.com</a>
+                            </span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-icon">
+                                <span class="icon icon-phone-solid">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                        <path
+                                            d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                        </path>
+                                    </svg>
+                                </span> </span>
+                            <span class="contact-text">
+                                022321/129239
+                            </span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-icon">
+                                <span class="icon icon-fax-solid">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                        <path
+                                            d="M192 64h197.5L416 90.51V160h64V77.25c0-8.484-3.375-16.62-9.375-22.62l-45.25-45.25C419.4 3.375 411.2 0 402.8 0H160C142.3 0 128 14.33 128 32v128h64V64zM64 128H32C14.38 128 0 142.4 0 160v320c0 17.62 14.38 32 32 32h32c17.62 0 32-14.38 32-32V160C96 142.4 81.63 128 64 128zM480 192H128v288c0 17.6 14.4 32 32 32h320c17.6 0 32-14.4 32-32V224C512 206.4 497.6 192 480 192zM288 432c0 8.875-7.125 16-16 16h-32C231.1 448 224 440.9 224 432v-32C224 391.1 231.1 384 240 384h32c8.875 0 16 7.125 16 16V432zM288 304c0 8.875-7.125 16-16 16h-32C231.1 320 224 312.9 224 304v-32C224 263.1 231.1 256 240 256h32C280.9 256 288 263.1 288 272V304zM416 432c0 8.875-7.125 16-16 16h-32c-8.875 0-16-7.125-16-16v-32c0-8.875 7.125-16 16-16h32c8.875 0 16 7.125 16 16V432zM416 304c0 8.875-7.125 16-16 16h-32C359.1 320 352 312.9 352 304v-32C352 263.1 359.1 256 368 256h32C408.9 256 416 263.1 416 272V304z">
+                                        </path>
+                                    </svg>
+                                </span> </span>
+                            <span class="contact-text">
+                                +1 323 555 1234
+                            </span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-icon">
+                                <span class="icon icon-location-dot-solid">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                        <path
+                                            d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                        </path>
+                                    </svg>
+                                </span> </span>
+                            <span class="contact-text">
+                                <a href="" title="Google Maps" target="_blank" aria-label="Google Maps"
+                                    rel="noopener">Anfahrt bei Google Maps</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rhweb-contact-widget-social-media py-3">
+                    <a class="rhweb-contact-widget-social-icon facebook" aria-label="Facebook" title="Facebook"
+                        href="https://facebook.com" target="_blank" rel="noopener">
+                        <span class="icon icon-facebook-f-brands">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                </path>
+                            </svg>
+                        </span> </a>
+                    <a class="rhweb-contact-widget-social-icon instagram" aria-label="Instagram" title="Instagram"
+                        href="https://instagram.com" target="_blank" rel="noopener">
+                        <span class="icon icon-instagram-brands">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                </path>
+                            </svg>
+                        </span> </a>
+                    <a class="rhweb-contact-widget-social-icon whatsapp" aria-label="WhatsApp" title="WhatsApp"
+                        href="https://whatsapp.com" target="_blank" rel="noopener">
+                        <span class="icon icon-whatsapp-brands">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+                                </path>
+                            </svg>
+                        </span> </a>
+                    <a class="rhweb-contact-widget-social-icon twitter" aria-label="Twitter" title="Twitter"
+                        href="https://twitter.com" target="_blank" rel="noopener">
+                        <span class="icon icon-twitter-brands">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                                </path>
+                            </svg>
+                        </span> </a>
+                    <a class="rhweb-contact-widget-social-icon youtube" aria-label="YouTube" title="YouTube"
+                        href="https://youtube.com" target="_blank" rel="noopener">
+                        <span class="icon icon-youtube-brands">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                </path>
+                            </svg>
+                        </span> </a>
+                    <a class="rhweb-contact-widget-social-icon linkedin" aria-label="LinkedIn" title="LinkedIn"
+                        href="https://linkedin.com" target="_blank" rel="noopener">
+                        <span class="icon icon-linkedin-in-brands">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                </path>
+                            </svg>
+                        </span> </a>
+                    <a class="rhweb-contact-widget-social-icon xing" aria-label="Xing" title="Xing"
+                        href="https://xing.com" target="_blank" rel="noopener">
+                        <span class="icon icon-xing-brands">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M162.7 210c-1.8 3.3-25.2 44.4-70.1 123.5-4.9 8.3-10.8 12.5-17.7 12.5H9.8c-7.7 0-12.1-7.5-8.5-14.4l69-121.3c.2 0 .2-.1 0-.3l-43.9-75.6c-4.3-7.8.3-14.1 8.5-14.1H100c7.3 0 13.3 4.1 18 12.2l44.7 77.5zM382.6 46.1l-144 253v.3L330.2 466c3.9 7.1.2 14.1-8.5 14.1h-65.2c-7.6 0-13.6-4-18-12.2l-92.4-168.5c3.3-5.8 51.5-90.8 144.8-255.2 4.6-8.1 10.4-12.2 17.5-12.2h65.7c8 0 12.3 6.7 8.5 14.1z">
+                                </path>
+                            </svg>
+                        </span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="js-pseudo-modal-template">
+        <div class="modal modal-lg fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header only-close">
+                        <div class="modal-title js-pseudo-modal-template-title-element h5"></div>
+                        <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body js-pseudo-modal-template-content-element">
+                    </div>
+                </div>
+            </div>
+            <template class="js-pseudo-modal-back-btn-template">
+                <button class="js-pseudo-modal-back-btn btn btn-outline-primary" data-ajax-modal="true" data-url="#"
+                    href="#">
+                    <span class="icon icon-arrow-left icon-sm icon-me-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24"
+                            height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <path
+                                    d="m3.4142 13 4.293 4.2929c.3904.3905.3904 1.0237 0 1.4142-.3906.3905-1.0238.3905-1.4143 0l-6-6c-.3905-.3905-.3905-1.0237 0-1.4142l6-6c.3905-.3905 1.0237-.3905 1.4142 0 .3905.3905.3905 1.0237 0 1.4142L3.4142 11H23c.5523 0 1 .4477 1 1s-.4477 1-1 1H3.4142z"
+                                    id="icons-default-arrow-left"></path>
+                            </defs>
+                            <use xlink:href="#icons-default-arrow-left" fill="#758CA3" fill-rule="evenodd"></use>
+                        </svg>
+                    </span> Zurück
+                </button>
+            </template>
+        </div>
+    </div>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            (function initPlayVideo() {
+                $(".f-video-cover").on("click", function () {
+                  var clickId = $(this).attr('id');
+                    $(this).fadeOut().siblings('.f-video-player').html(
+                    '<video src="video/kb-led-leuchten-1.mp4" type="video/mp4" autoplay controls style="width: 100%;height: 500px;"></video>'
+                        // /*'<iframe width="560" height="315" src="https://www.youtube.com/embed/' + $("#"+clickId).data("video") + '?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'*/
+                    );
+                });
+            })();
+        });
+        </script>
+</body>
+
+</html>
