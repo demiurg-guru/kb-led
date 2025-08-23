@@ -13,6 +13,10 @@
 
 <body class="is-ctl-navigation is-act-home">
     <style>
+        :root {
+            --prymeri-color: #95bb1b;
+
+        }
         * {
             box-sizing: border-box;
         }
@@ -112,7 +116,7 @@
             overflow: hidden;
             transition: visibility 0s, opacity .5s linear, width .5s linear, height .5s linear;
             /* box-shadow: 0px 26px 20px #6c6c6c; */
-            box-shadow: 0px 0px 400px #fed700, 0px 26px 26px #3a3a3a;
+            box-shadow: 0px 0px 400px var(--prymeri-color), 0px 26px 26px #3a3a3a;
         }
         .section.play-video .kacheln .boxen .box .box-inner .box-leistung--content {
             margin: 0 12.5%;
@@ -160,7 +164,7 @@
             width: 100% !important; 
             padding: 0;
             text-align: center;
-            /* box-shadow: 0px 0px 400px #fed700; */
+            /* box-shadow: 0px 0px 400px var(--prymeri-color); */
             box-shadow: none;
             transition: all .3s ease-in-out;
         }
@@ -224,11 +228,11 @@
             width: 340px;
             padding: 0;
             text-align: center;
-            box-shadow: 0px 0px 400px #fed700, 0px 26px 20px #3a3a3a;
+            box-shadow: 0px 0px 400px var(--prymeri-color), 0px 26px 20px #3a3a3a;
             transition: all .2s ease-in-out;
         }
         .blocks .block-item:hover {
-            box-shadow: 0px 0px 400px #fed700, 0px 16px 20px #3a3a3a;
+            box-shadow: 0px 0px 400px var(--prymeri-color), 0px 16px 20px #3a3a3a;
             transition: all .2s ease-in-out;
         }
         
@@ -285,12 +289,12 @@
         }
 
         .section.beleuchtung button.btn.btn-leistung {
-            background: #fed700 !important; 
+            background: var(--prymeri-color) !important; 
             color: #000000;
             transition: all .3s ease-in-out;
         }
         .section.beleuchtung button.btn.btn-leistung:hover {
-            background: #fed700 !important;
+            background: var(--prymeri-color) !important;
             box-shadow: inset 0 0 15px #3a3a3a;
             text-decoration: none;
             transition: all .3s ease-in-out;
@@ -299,7 +303,7 @@
 
         .newsletter {
             z-index: 9999;
-            background-color: #fed700;
+            background-color: var(--prymeri-color);
             background-image: linear-gradient(45deg, transparent,transparent 48%, rgba(0,0,0,.3) 48%, rgba(0,0,0,.3) 52%, transparent 52%);
             background-size: 10px 10px;
             box-shadow: 0px -2px 7px #000000de, 0px 14px 21px #00000075 inset;
@@ -337,10 +341,10 @@
         }
         .title-h1{
             padding: 30px 0;
-            background-color: #fed700;
+            background-color: var(--prymeri-color);
             background-image: linear-gradient(45deg, transparent,transparent 48%, rgba(0,0,0,.3) 48%, rgba(0,0,0,.3) 52%, transparent 52%);
             background-size: 10px 10px;
-            box-shadow: 0px 10px 20px #000, 0px 28px 30px #00000045 inset, -16px 28px 30px #fed700 inset, 16px 28px 30px #fed700 inset;
+            box-shadow: 0px 10px 20px #000, 0px 28px 30px #00000045 inset, -16px 28px 30px var(--prymeri-color) inset, 16px 28px 30px var(--prymeri-color) inset;
         }
 
         .info-place {
@@ -348,7 +352,7 @@
             padding-bottom: 1.25rem; 
             height: 17.2414%; 
             top: 10.3448%;
-            box-shadow: 0px 0px 400px #fed700, 0px 26px 20px #3a3a3a;
+            box-shadow: 0px 0px 400px var(--prymeri-color), 0px 26px 20px #3a3a3a;
             transition: all .2s ease-in-out;
         }
         .leyba {
@@ -360,7 +364,7 @@
             border: 8px solid #b3b3b3;
             line-height: 88px;
             border-radius: 50%;
-            background: #fed700;
+            background: var(--prymeri-color);
             vertical-align: middle;
             box-shadow: 0px 8px 15px #7b6d2b;
             background-image: linear-gradient(45deg, transparent, transparent 48%, rgba(0, 0, 0, .3) 48%, rgba(0, 0, 0, .3) 52%, transparent 52%);
@@ -452,8 +456,8 @@
             border-bottom: 200px solid transparent;
             border-right: 0 solid transparent;
             border-top: 0 solid transparent;
-            border-left: 250px solid #fed700;
-            /* filter: drop-shadow(0px 0px 5px #fed700); */
+            border-left: 250px solid var(--prymeri-color);
+            /* filter: drop-shadow(0px 0px 5px var(--prymeri-color)); */
             /* animation: myAnim 2s cubic-bezier(0.11, 0, 0.5, 0) 0s infinite normal forwards; */
             position: relative;
             top: -10px;
@@ -482,7 +486,7 @@
         @keyframes myAnim {
             0% {
                 /* opacity: 1; */
-                filter: drop-shadow(0px 0px 5px #fed700);
+                filter: drop-shadow(0px 0px 5px var(--prymeri-color));
             }
 
             50% {
@@ -492,7 +496,7 @@
 
             100% {
                 /* opacity: 1; */
-                filter: drop-shadow(0px 0px 5px #fed700);
+                filter: drop-shadow(0px 0px 5px var(--prymeri-color));
             }
         }
 
@@ -1021,7 +1025,7 @@
         <div class="header-inner" style="">
 
             <div class="top-bar d-none d-lg-block rhweb-topbar">
-                <div class="twt-usp-bar-container" style="box-shadow: 0px 2px 10px #000;padding: 8px 0;background: #fed700;">
+                <div class="twt-usp-bar-container" style="box-shadow: 0px 2px 10px #000;padding: 8px 0;background: var(--prymeri-color);">
                     <div class="container">
                         <div class="twt-usp-bar-items"
                             style="justify-content: space-between;display: flex;align-items: center;flex-direction: row;height: 100%;">
@@ -1577,7 +1581,7 @@
                                                         </div>
                                                         <div class="box-leistung---link-container">  
                                                             <button class="btn btn-leistung" 
-                                                                style="background: #fed700; color: #000;top: 56%;">
+                                                                style="background: var(--prymeri-color); color: #000;top: 56%;">
                                                                 Play Video
                                                             </button> 
                                                         </div>
@@ -1705,7 +1709,7 @@
                                                     <a href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
                                                         class="box-leistung--link">
                                                         <button class="btn btn-leistung"
-                                                            style="background: #fed700; color: #000000;">
+                                                            style="background: var(--prymeri-color); color: #000000;">
                                                             Mehr erfahren
                                                         </button>
                                                     </a>
@@ -1744,7 +1748,7 @@
                                                         href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
                                                         class="box-leistung--link"> <button
                                                             class="btn btn-leistung"
-                                                            style="background: #fed700; color: #000000;">Mehr
+                                                            style="background: var(--prymeri-color); color: #000000;">Mehr
                                                             erfahren</button> </a> </div>
                                             </div>
                                         </div>
@@ -1780,7 +1784,7 @@
                                                         href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
                                                         class="box-leistung--link"> <button
                                                             class="btn btn-leistung"
-                                                            style="background: #fed700; color: #000000;">Mehr
+                                                            style="background: var(--prymeri-color); color: #000000;">Mehr
                                                             erfahren</button> </a> </div>
                                             </div>
                                         </div>
@@ -1798,18 +1802,18 @@
                             <h1 style="text-align: center;">Herzlich willkommen im K + B LED Leuchtenshop</h1> 
                             <h2 style="text-align: center;">
                                 <a title="LIGHTING PROFESSIONAL SOLUTION" href="https://www.kb-led-leuchten.de/lighting-professional-solutions/" target="_self">
-                                    <span style="color:#fed700;">✚ LIGHTING PROFESSIONAL SOLUTION ✚</span>
+                                    <span style="color:var(--prymeri-color);">✚ LIGHTING PROFESSIONAL SOLUTION ✚</span>
                                 </a>
                             </h2> 
                             <p style="text-align: center;">
                                 Wir befassen uns schon seit über <strong>30 Jahren mit LED Technik</strong> und haben weit vor der Verwendung von LED´s als Lichtquelle große Erfahrungen in dem Bereich gesammelt. Dieses über Jahrzehnte gewachsene Know-how nutzt die K + B lighting systems GmbH für die <strong>Entwicklung und Produktion professioneller LED Licht-Lösungen 
-                                    <span style="text-decoration: underline; color:#fed700;">made in Germany</span>.</strong>
+                                    <span style="text-decoration: underline; color:var(--prymeri-color);">made in Germany</span>.</strong>
                             </p> 
                             <p style="text-align: center;">Mit über 70 Mitarbeitern entwickelt und produziert die 
                                 <span style="text-decoration: underline;">
-                                    <span style="color:#fed700;">
+                                    <span style="color:var(--prymeri-color);">
                                         <a title="KB Electronic" href="http://www.kb-electronic.de/" target="_blank" rel="nofollow noopener">
-                                            <span style="color:#fed700;">
+                                            <span style="color:var(--prymeri-color);">
                                                 <strong>K + B Gruppe</strong></span>
                                         </a>
                                     </span>
@@ -1817,9 +1821,9 @@
                             </p> 
                             <p style="text-align: center;">Bei einer guten 
                                 <span style="text-decoration: underline;">
-                                    <span style="color:#fed700;">
+                                    <span style="color:var(--prymeri-color);">
                                         <strong><a title="LED Lampen Online Shop" href="https://www.kb-led-leuchten.de/led-leuchten/" target="_self">
-                                            <span style="color:#fed700; text-decoration: underline;">LED Lampe</span></a></strong></span>
+                                            <span style="color:var(--prymeri-color); text-decoration: underline;">LED Lampe</span></a></strong></span>
                                     </span> kommt es auf so viele Faktoren an, <strong>Qualität der LED´s</strong>, Farbtemperatur, Wiedergabeindex, Wärmemanagement, Vorschaltgeräte und vieles mehr.
                             </p> 
                             <p style="text-align: center;">Wir produzieren in höchster <strong>Qualität und modernster Technik</strong>. Wir stehen für <strong>ressourcenschonenden und nachhaltigen Umgang von Rohstoffen</strong>. Wir möchten mit unserer Erfahrung den Kunden bei LED Beleuchtungs Projekten bestens beraten und versuchen ihm die energiesparendste und kostengünstigste Lösung anzubieten.
@@ -1827,16 +1831,16 @@
                             <p style="text-align: center;">Bereits bei der Entwicklung unserer <strong>LED Leuchte KB Silverline.Pro</strong> haben wir auf ein <strong>umweltschonendes und nachhaltiges Produkt</strong> geachtet, dass unsere LED Leuchte Modular aufgebaut, jederzeit erweiterbar und Flexibel für unterschiedlichste Anwendungen verwendbar ist. Damit kann mit nur einem Modell sämtliche Anforderungen und Bereiche erfüllt werden. Auch auf eine kostengünstige Montage haben wir bei der Entwicklung geachtet, somit können bei der <strong>KB Silverline.PRO LED Leuchte</strong> alle verbauten Teile, einzeln bis hin zu den einzelnen <strong>LED Streifen</strong> nahezu <strong>Werkzeuglos ausgetauscht</strong> werden. Somit haben wir bereits heute einen wichtigen Schritt der <strong>Nachhaltigkeit</strong> für eine spätere Entsorgung vorgesorgt.
                             </p> 
                             <p style="text-align: left;">Auch die vielen Faktoren auf die wir achten, führen zu einer langlebigen, nachhaltigen 
-                                <span style="text-decoration: underline;"><span style="color:#fed700;">
+                                <span style="text-decoration: underline;"><span style="color:var(--prymeri-color);">
                                     <a title="Arbeitsplatz LED Leuchten" href="https://www.kb-led-leuchten.de/arbeitsplatz-gewerbe-beleuchtung/" target="_self">
-                                        <span style="color:#fed700;"><strong>LED Leuchten</strong></span>
+                                        <span style="color:var(--prymeri-color);"><strong>LED Leuchten</strong></span>
                                     </a></span></span> mit einem gesunden Licht für Mensch, Tier und Pflanzen.
                             </p> 
                             <p style="text-align: center;">
                                 <span style="text-decoration: underline;">
-                                    <span style="color:#fed700;">
+                                    <span style="color:var(--prymeri-color);">
                                         <a title="LED Leuchten Shop Anfrage Formular" href="https://www.kb-led-leuchten.de/anfrage-formular" target="_self">
-                                            <span style="color: #fed700;"><strong>Wir freuen uns auf Sie auf Ihr Interesse und Ihren Fragen.</strong></span>
+                                            <span style="color: var(--prymeri-color);"><strong>Wir freuen uns auf Sie auf Ihr Interesse und Ihren Fragen.</strong></span>
                                         </a></span></span>
                             </p> 
                         </div>
